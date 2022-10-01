@@ -1,0 +1,8 @@
+# directories
+## python virtual environment
+.venv
+
+# files
+
+#macos
+.DS_Store
