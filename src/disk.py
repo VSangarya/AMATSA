@@ -1,5 +1,6 @@
 """This module fetches disk information and returns a JSON with the disk data"""
 import psutil
+from utils import size_in_gb
 
 class Disk:
     """Class to fetch, format and return disk information"""
@@ -24,15 +25,10 @@ class Disk:
 
             each_disk["name"] = self.check_attr(x,"device")
             each_disk["type"] = self.check_attr(x,"fstype")
-            each_disk["total_size"] = self.check_attr(dsk,"total")
-            each_disk["used"] = self.check_attr(dsk,"used")
-            each_disk["free"] = self.check_attr(dsk,"free")
+            each_disk["total_size"] = size_in_gb(self.check_attr(dsk,"total"))
+            each_disk["used"] = size_in_gb(self.check_attr(dsk,"used"))
+            each_disk["free"] = size_in_gb(self.check_attr(dsk,"free"))
             each_disk["percentage"] = self.check_attr(dsk,"percent")
 
             self.data["disk"].append(each_disk)
         return self.data["disk"]
-
-#if __name__ == "__main__":
-#  d = Disk()
-#  print(d.retrieve_disk_info())
-
