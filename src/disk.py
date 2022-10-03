@@ -34,8 +34,7 @@ class Disk:
             self.data["Disk"].append(each_disk)
         return json.dumps(self.data, indent = 2)
 
-""" # pylint: disable=pointless-string-statement
-if __name__ == "__main__":
-  d = Disk()
-  print(d.retrieve_disk_info())
-"""
+#if __name__ == "__main__":
+#  d = Disk()
+#  print(d.retrieve_disk_info())
+
