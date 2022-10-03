@@ -10,13 +10,10 @@ from elasticsearch import Elasticsearch
 
 if __name__ == "__main__":
     client_json = {}
-
 # read config from yml file
     with open(os.path.dirname(os.path.realpath(__file__)) + "/config/amatsa-client.yml", "r", encoding="utf-8") as file:
         config = yaml.safe_load(file)
-
 # collect data
-
     version = config["version"]
     client_json["metadata"]={"version":version,"time":str(time.localtime)}
     token = (config["auth"]["username"], config["auth"]["password"])
