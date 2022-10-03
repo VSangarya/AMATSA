@@ -1,5 +1,6 @@
 #!/usr/bin/python
 """This module fetches network information and returns a JSON with the network info data"""
+#pylint: disable=consider-using-f-string
 import socket
 import speedtest
 import datetime
@@ -34,7 +35,7 @@ class Network:
     def get_network_info(self):
         self.connect_status()
         mac = get_mac()
-        self.mac_address = ":".join(("%012X" % mac)[i:i+2] for i in range(0, 12, 2))
+        self.mac_address =":".join(("%012X" % mac)[i:i+2] for i in range(0, 12, 2))
         if not self.mac_address:
             self.mac_address = UNKNOWN
 
