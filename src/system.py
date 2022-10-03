@@ -6,7 +6,7 @@ import psutil
 import sys
 import time
 from datetime import datetime
-from utils import size_in_gb
+from src.utils import size_in_gb
 
 UNKNOWN = "unknown"
 
