@@ -1,6 +1,5 @@
 #!/usr/bin/python
 """This module fetches network information and returns a JSON with the network info data"""
-import uuid
 import socket
 import speedtest
 import datetime
