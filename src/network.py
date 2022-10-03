@@ -1,16 +1,16 @@
 #!/usr/bin/python
-# -*- coding: utf-8 -*-
+"""This module fetches network information and returns a JSON with the network info data"""
 import uuid
 import socket
 import speedtest
 import datetime
-import urllib.request
+from urllib.request import urlopen
 
-UNKNOWN = 'unknown'
+UNKNOWN = "unknown"
 
 
 class Network:
-
+    """Class to fetch, format and return network information"""
     mac_address = None
     ip_address = None
     hostname = None
@@ -25,15 +25,15 @@ class Network:
 
     def connect_status(self):
         try:
-            host = 'http://google.com'
-            urllib.request.urlopen(host)  # Python 3.x
-            self.connection_status = False
-        except:
+            host = "http://google.com"
+            with urlopen(host) as response: # Python 3.x
+                self.connection_status = True
+        except: #pylint: disable=bare-except
             self.connection_status = False
 
     def get_network_info(self):
         self.connect_status()
-        self.mac_address = ':'.join(['{:02x}'.format(uuid.getnode() >> ele
+        self.mac_address = ":".join(["{:02x}".format(uuid.getnode() >> ele
                                 & 0xff) for ele in range(0, 8 * 6, 8)][:
                                 :-1])
         if not self.mac_address:
@@ -48,7 +48,7 @@ class Network:
 
         if self.connection_status:
             self.speed_test = speedtest.Speedtest(secure=1)
-            self.time_now = datetime.datetime.now().strftime('%H:%M:%S')
+            self.time_now = datetime.datetime.now().strftime("%H:%M:%S")
             self.down_speed = round(round(self.speed_test.download())
                                    / 1048576, 2)
             self.up_speed = round(round(self.speed_test.upload())
@@ -56,6 +56,7 @@ class Network:
         else:
             self.down_speed = UNKNOWN
             self.up_speed = UNKNOWN
+        print(self.connection_status)
 
     def fill_network_info(self, json: dict):
         json["mac_address"] = self.mac_address
