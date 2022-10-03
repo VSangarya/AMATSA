@@ -1,7 +1,6 @@
 '''Tests on driver code'''
 
 import json
-import src.driver
 def validate_json(json_string):
     success=True
     try:
