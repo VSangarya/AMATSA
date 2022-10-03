@@ -5,7 +5,7 @@ import yaml
 import sys 
 import time
 from elasticsearch import Elasticsearch
-from getmac import get_mac_address as gma
+
 
 '''
 Client Code integrates all metrics and send to Elastic Server
@@ -23,8 +23,8 @@ if __name__ == "__main__":
     version = config["version"]
     client_json["metadata"]={"version":version,"time":str(time.localtime)}
     token = (config["auth"]["username"], config["auth"]["password"])
-    client_id=str((gma()))
-    client_json["id"]=client_id
+    # client_id=str((gma()))
+    # client_json["id"]=client_id
     client_disk=disk.Disk()
     client_disk_info=client_disk.retrieve_disk_info()
     client_json["Disk"]=client_disk_info
