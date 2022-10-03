@@ -6,7 +6,7 @@ import psutil
 import sys
 import time
 from datetime import datetime
-from utils import size
+from utils import size_in_gb
 
 UNKNOWN = "unknown"
 
@@ -59,7 +59,7 @@ class System:
 
         # physical memory
         mem = psutil.virtual_memory()
-        self.total_memory = size(mem.total)
+        self.total_memory = size_in_gb(mem.total)
         if not self.total_memory:
             self.total_memory = UNKNOWN
 
@@ -72,7 +72,7 @@ class System:
         json["is64bit"] = self.is_x64
         json["physical_cores"] = self.physical_cores
         json["logical_cores"] = self.logical_cores
-        json["total_memory"] = self.total_memory
+        json["total_memory_gb"] = self.total_memory
 
     # This method fills information that is more prone to change
     def FillSystemMetrics(self, json: dict):
@@ -82,7 +82,7 @@ class System:
         json["cpu_load_15min"] = round(cpu_load[2], 2)
 
         # available memory
-        json["avail_memory"] = size(psutil.virtual_memory().available)
+        json["avail_memory_gb"] = size_in_gb(psutil.virtual_memory().available)
 
         # time since last boot
         current_time = datetime.fromtimestamp(time.time())
