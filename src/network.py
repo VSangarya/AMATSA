@@ -7,6 +7,7 @@ import urllib.request
 
 UNKNOWN = "unknown"
 
+
 class network:
     macaddr = None
     ipaddr = None
@@ -18,39 +19,40 @@ class network:
     connection_status = None
 
     def __init__(self):
-        self.adapterlist ={}
-        self.connection_status =False
+        self.adapterlist = {}
+        self.connection_status = False
 
     def connectStatus(self):
         try:
             host = 'http://google.com'
             urllib.request.urlopen(host)  # Python 3.x
-            self.connection_status =False
-        except:
+            self.connection_status = False
+        except BaseException:
             self.connection_status = False
 
     def get_network_info(self):
         self.connectStatus()
-        self.macaddr = ':'.join(['{:02x}'.format((uuid.getnode() >> ele) & 0xff)
-for ele in range(0,8*6,8)][::-1])
+        self.macaddr = ':'.join(['{:02x}'.format(
+            (uuid.getnode() >> ele) & 0xff) for ele in range(0, 8 * 6, 8)][::-1])
         if not self.macaddr:
-            self.macaddr =UNKNOWN
+            self.macaddr = UNKNOWN
 
         self.hostname = socket.gethostname()
         if not self.hostname:
-            self.hostname= UNKNOWN
-            self.ipaddr =UNKNOWN
+            self.hostname = UNKNOWN
+            self.ipaddr = UNKNOWN
         else:
             self.ipaddr = socket.gethostbyname(self.hostname)
 
-        if self.connection_status == True:
+        if self.connection_status:
             self.speedtest = speedtest.Speedtest(secure=1)
             self.time_now = datetime.datetime.now().strftime("%H:%M:%S")
-            self.downspeed = round((round(self.speedtest.download()) / 1048576), 2)
+            self.downspeed = round(
+                (round(self.speedtest.download()) / 1048576), 2)
             self.upspeed = round((round(self.speedtest.upload()) / 1048576), 2)
         else:
-            self.downspeed =UNKNOWN
-            self.upspeed =UNKNOWN
+            self.downspeed = UNKNOWN
+            self.upspeed = UNKNOWN
 
     def FillNetworkInfo(self, json: dict):
         json["macaddr"] = self.macaddr
@@ -60,5 +62,3 @@ for ele in range(0,8*6,8)][::-1])
         json["downspeed"] = self.downspeed
         json["upspeed"] = self.upspeed
         json["time_now"] = self.time_now
-
-
