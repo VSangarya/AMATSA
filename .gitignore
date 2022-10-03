@@ -1,6 +1,7 @@
 # directories
 ## python virtual environment
 .venv
+__pycache__
 
 # files
 
