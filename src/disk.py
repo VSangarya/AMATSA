@@ -19,7 +19,7 @@ class Disk:
 
     def retrieve_disk_info(self):
         par = psutil.disk_partitions()
-        self.data["Disk"] = []
+        self.data["disk"] = []
         for x in par:
             dsk = psutil.disk_usage(x.mountpoint)
             each_disk = {}
@@ -29,10 +29,10 @@ class Disk:
             each_disk["total_size"] = self.check_attr(dsk,"total")
             each_disk["used"] = self.check_attr(dsk,"used")
             each_disk["free"] = self.check_attr(dsk,"free")
-            each_disk["percetage"] = self.check_attr(dsk,"percent")
+            each_disk["percentage"] = self.check_attr(dsk,"percent")
 
-            self.data["Disk"].append(each_disk)
-        return json.dumps(self.data, indent = 2)
+            self.data["disk"].append(each_disk)
+        return self.data["disk"]
 
 #if __name__ == "__main__":
 #  d = Disk()
