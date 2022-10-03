@@ -1,7 +1,5 @@
 """This module fetches disk information and returns a JSON with the disk data"""
 import psutil
-import json
-
 
 class Disk:
     """Class to fetch, format and return disk information"""
