@@ -31,7 +31,7 @@ class Disk:
             each_disk["free"] = self.check_attr(dsk,"free")
             each_disk["percetage"] = self.check_attr(dsk,"percent")
 
-           self.data["Disk"].append(each_disk)
+            self.data["Disk"].append(each_disk)
         return json.dumps(self.data, indent = 2)
 
 """
