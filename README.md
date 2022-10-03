@@ -1,7 +1,12 @@
 # 🖥 AMATSA
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE-OF-CONDUCT.md)
-![Code Size](https://img.shields.io/github/languages/code-size/VSangarya/AMATSA)
+[![Code Size](https://img.shields.io/github/languages/code-size/VSangarya/AMATSA)](src)
 ![Downloads](https://img.shields.io/github/downloads/VSangarya/AMATSA/total)
+[![License](https://img.shields.io/github/license/VSangarya/AMATSA)](LICENSE)
+[![Commit Acitivity](https://img.shields.io/github/commit-activity/w/VSangarya/AMATSA)](https://github.com/VSangarya/AMATSA/pulse)
+[![Forks](https://img.shields.io/github/forks/VSangarya/AMATSA?style=social)](https://github.com/VSangarya/AMATSA/fork)
+[![Build](https://github.com/VSangarya/AMATSA/actions/workflows/build.yml/badge.svg)](.github/workflows/build.yml)
+
 
 Asset Monitoring and Analytics Tool for System Administrators
 
