@@ -5,6 +5,7 @@ import socket
 import speedtest
 import datetime
 from urllib.request import urlopen
+from uuid import getnode as get_mac
 
 UNKNOWN = "unknown"
 
@@ -26,16 +27,15 @@ class Network:
     def connect_status(self):
         try:
             host = "http://google.com"
-            with urlopen(host) as response: # Python 3.x
+            with urlopen(host): # Python 3.x
                 self.connection_status = True
         except: #pylint: disable=bare-except
             self.connection_status = False
 
     def get_network_info(self):
         self.connect_status()
-        self.mac_address = ":".join(["{:02x}".format(uuid.getnode() >> ele
-                                & 0xff) for ele in range(0, 8 * 6, 8)][:
-                                :-1])
+        mac = get_mac()
+        self.mac_address = ":".join(("%012X" % mac)[i:i+2] for i in range(0, 12, 2))
         if not self.mac_address:
             self.mac_address = UNKNOWN
 
@@ -56,7 +56,6 @@ class Network:
         else:
             self.down_speed = UNKNOWN
             self.up_speed = UNKNOWN
-        print(self.connection_status)
 
     def fill_network_info(self, json: dict):
         json["mac_address"] = self.mac_address
