@@ -19,3 +19,4 @@ urllib3==1.26.12
 wrapt==1.14.1
 psutil==5.9.2
 gputil==1.4.0
+getmac==0.8.3

@@ -1,8 +1,9 @@
 # directories
 ## python virtual environment
 .venv
+__pycache__
 
 # files
-
+__pycache__/
 #macos
 .DS_Store
