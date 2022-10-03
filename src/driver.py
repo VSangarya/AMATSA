@@ -10,6 +10,8 @@ import time
 from elasticsearch import Elasticsearch
 
 
+
+
 if __name__ == "__main__":
     client_json = {}
 # read config from yml file
@@ -38,3 +40,4 @@ if __name__ == "__main__":
     es = Elasticsearch(hosts = config["connect"]["endpoint"],ssl_assert_fingerprint=config["connect"]["tls-fingerprint"],basic_auth = token)
     resp = es.index(index = config["index"]["name"], document = client_json)
     # print(client_json)
+    
