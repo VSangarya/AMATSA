@@ -19,10 +19,3 @@ Windows:  `source .venv/Scripts/activate`<br/>
 ## 💻 Python Client
 
 See [client installation](INSTALL.md#-client) instructions.
-
-1. Clients use the YAML file in `src/config/amatsa-client.yml` to read configuration. Configuration includes:
-* version - client version
-* endpoint - elastic endpoint client uses to push collected data
-* tls-fingerprint - verify authenticity of Elasticsearch server
-* username, password - authentication to write to Elasticsearch
-* index - index where document will be written in Elasticsearch
