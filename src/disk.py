@@ -17,22 +17,22 @@ class Disk:
         return val
 
 
-  def retrieve_disk_info(self):
-      par = psutil.disk_partitions()
-      self.data["Disk"] = []
-      for x in par:
-          dsk = psutil.disk_usage(x.mountpoint)
-          each_disk = {}
+    def retrieve_disk_info(self):
+        par = psutil.disk_partitions()
+        self.data["Disk"] = []
+        for x in par:
+            dsk = psutil.disk_usage(x.mountpoint)
+            each_disk = {}
 
-          each_disk["name"] = self.check_attr(x,"device")
-          each_disk["type"] = self.check_attr(x,"fstype")
-          each_disk["total_size"] = self.check_attr(dsk,"total")
-          each_disk["used"] = self.check_attr(dsk,"used")
-          each_disk["free"] = self.check_attr(dsk,"free")
-          each_disk["percetage"] = self.check_attr(dsk,"percent")
+            each_disk["name"] = self.check_attr(x,"device")
+            each_disk["type"] = self.check_attr(x,"fstype")
+            each_disk["total_size"] = self.check_attr(dsk,"total")
+            each_disk["used"] = self.check_attr(dsk,"used")
+            each_disk["free"] = self.check_attr(dsk,"free")
+            each_disk["percetage"] = self.check_attr(dsk,"percent")
 
-          self.data["Disk"].append(each_disk)
-      return json.dumps(self.data, indent = 2)
+           self.data["Disk"].append(each_disk)
+        return json.dumps(self.data, indent = 2)
 
 """
 if __name__ == "__main__":
