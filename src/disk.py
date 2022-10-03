@@ -12,7 +12,7 @@ class Disk:
     def check_attr(self,attr, val):
         try:
             val = getattr(attr, val)
-        except:
+        except: # pylint: disable=bare-except
             val = None
         return val
 
@@ -34,7 +34,7 @@ class Disk:
             self.data["Disk"].append(each_disk)
         return json.dumps(self.data, indent = 2)
 
-"""
+""" # pylint: disable=pointless-string-statement
 if __name__ == "__main__":
   d = Disk()
   print(d.retrieve_disk_info())
