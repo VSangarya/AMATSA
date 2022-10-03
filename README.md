@@ -1,4 +1,8 @@
 # 🖥 AMATSA
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE-OF-CONDUCT.md)
+![Code Size](https://img.shields.io/github/languages/code-size/VSangarya/AMATSA)
+![Downloads](https://img.shields.io/github/downloads/VSangarya/AMATSA/total)
+
 Asset Monitoring and Analytics Tool for System Administrators
 
 ## 👩🏼‍💻 🚀 Developer Environment Setup
