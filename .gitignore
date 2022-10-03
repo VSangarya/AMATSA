@@ -3,6 +3,6 @@
 .venv
 
 # files
-
+__pycache__/
 #macos
 .DS_Store
