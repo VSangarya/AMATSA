@@ -1,64 +1,67 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 import uuid
 import socket
 import speedtest
 import datetime
 import urllib.request
 
+UNKNOWN = 'unknown'
 
-UNKNOWN = "unknown"
 
-class network:
-    macaddr = None
-    ipaddr = None
+class Network:
+
+    mac_address = None
+    ip_address = None
     hostname = None
     time_now = None
-    downspeed = None
-    upspeed = None
-    speedtest = None
+    down_speed = None
+    up_speed = None
+    speed_test = None
     connection_status = None
 
     def __init__(self):
-        self.adapterlist ={}
-        self.connection_status =False
+        self.connection_status = False
 
-    def connectStatus(self):
+    def connect_status(self):
         try:
             host = 'http://google.com'
             urllib.request.urlopen(host)  # Python 3.x
-            self.connection_status =False
+            self.connection_status = False
         except:
             self.connection_status = False
 
     def get_network_info(self):
-        self.connectStatus()
-        self.macaddr = ':'.join(['{:02x}'.format((uuid.getnode() >> ele) & 0xff)
-for ele in range(0,8*6,8)][::-1])
-        if not self.macaddr:
-            self.macaddr =UNKNOWN
+        self.connect_status()
+        self.mac_address = ':'.join(['{:02x}'.format(uuid.getnode() >> ele
+                                & 0xff) for ele in range(0, 8 * 6, 8)][:
+                                :-1])
+        if not self.mac_address:
+            self.mac_address = UNKNOWN
 
         self.hostname = socket.gethostname()
         if not self.hostname:
-            self.hostname= UNKNOWN
-            self.ipaddr =UNKNOWN
+            self.hostname = UNKNOWN
+            self.ip_address = UNKNOWN
         else:
-            self.ipaddr = socket.gethostbyname(self.hostname)
+            self.ip_address = socket.gethostbyname(self.hostname)
 
-        if self.connection_status == True:
-            self.speedtest = speedtest.Speedtest(secure=1)
-            self.time_now = datetime.datetime.now().strftime("%H:%M:%S")
-            self.downspeed = round((round(self.speedtest.download()) / 1048576), 2)
-            self.upspeed = round((round(self.speedtest.upload()) / 1048576), 2)
+        if self.connection_status:
+            self.speed_test = speedtest.Speedtest(secure=1)
+            self.time_now = datetime.datetime.now().strftime('%H:%M:%S')
+            self.down_speed = round(round(self.speed_test.download())
+                                   / 1048576, 2)
+            self.up_speed = round(round(self.speed_test.upload())
+                                 / 1048576, 2)
         else:
-            self.downspeed =UNKNOWN
-            self.upspeed =UNKNOWN
+            self.down_speed = UNKNOWN
+            self.up_speed = UNKNOWN
 
-    def FillNetworkInfo(self, json: dict):
-        json["macaddr"] = self.macaddr
-        json["ipaddr"] = self.ipaddr
+    def fill_network_info(self, json: dict):
+        json["mac_address"] = self.mac_address
+        json["ip_address"] = self.ip_address
         json["hostname"] = self.hostname
-        json["connectStatus"] = self.connectStatus
-        json["downspeed"] = self.downspeed
-        json["upspeed"] = self.upspeed
+        json["connection_status"] = self.connection_status
+        json["down_speed"] = self.down_speed
+        json["up_speed"] = self.up_speed
         json["time_now"] = self.time_now
-
-
