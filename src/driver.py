@@ -26,7 +26,6 @@ if __name__ == "__main__":
     # print(client_json)
     client_json=json.dumps(client_json,indent = 2)
     # print(client_json)
-    es = Elasticsearch(hosts = config["connect"]["endpoint"], 
-ssl_assert_fingerprint = config["connect"]["tls-fingerprint"],basic_auth = token)
+    es = Elasticsearch(hosts = config["connect"]["endpoint"],ssl_assert_fingerprint=config["connect"]["tls-fingerprint"],basic_auth = token)
     resp = es.index(index = config["index"]["name"], document = client_json)
     print(client_json)
