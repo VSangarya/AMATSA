@@ -25,7 +25,7 @@ pyver=$(python3 -c 'import sys; print(".".join(map(str, sys.version_info[:3])))'
 if [ $? -eq 0 ]
 then
     split=(${pyver//./ })    
-    if [ ${split[0]} -eq "3" ] && [ ${split[1]} -lt "10" ]
+    if [ "${split[0]}" -eq "3" ] && [ "${split[1]}" -lt "10" ]
     then
         echo "Found python v${split[0]}.${split[1]}. Install Python v3.10+ and try again."
         exit 1

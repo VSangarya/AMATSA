@@ -16,7 +16,7 @@ if __name__ == "__main__":
         config = yaml.safe_load(file)
 # collect data
     version = config["version"]
-    client_json["metadata"]={"version":version,"time":datetime.utcnow().isoformat() + "Z"}
+    client_json["metadata"] = {"version": version, "time": datetime.utcnow().isoformat() + "Z"}
     token = (config["auth"]["username"], config["auth"]["password"])
     # client_id=str((gma()))
     # client_json["id"]=client_id
