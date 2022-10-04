@@ -1,5 +1,4 @@
 """Tests for the Disk module"""
-from pandas import DataFrame
 from src.disk import Disk
 
 def test_disk_init():
