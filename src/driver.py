@@ -4,9 +4,10 @@ import json
 # from xmlrpc import client
 import disk
 import system
+import network
 import os
 import yaml
-import time
+import datetime
 from elasticsearch import Elasticsearch
 
 
@@ -19,7 +20,7 @@ if __name__ == "__main__":
         config = yaml.safe_load(file)
 # collect data
     version = config["version"]
-    client_json["metadata"]={"version":version,"time":str(time.localtime)}
+    client_json["metadata"]={"version":version,"time":str(datetime.datetime.now())}
     token = (config["auth"]["username"], config["auth"]["password"])
     # client_id=str((gma()))
     # client_json["id"]=client_id
@@ -34,9 +35,14 @@ if __name__ == "__main__":
     client_json["agent"]=agent
     client_json["metrics"]=metrics
     #More code for other metrics
+    n=network.Network()
+    n.get_network_info()
+    network={}
+    n.fill_network_info(network)
     # print(client_json)
+    client_json["network"]=network
     client_json=json.dumps(client_json,indent = 2)
-    # print(client_json)
+    print("final_json",client_json)
     es = Elasticsearch(hosts = config["connect"]["endpoint"],ssl_assert_fingerprint=config["connect"]["tls-fingerprint"],basic_auth = token)
     resp = es.index(index = config["index"]["name"], document = client_json)
 
