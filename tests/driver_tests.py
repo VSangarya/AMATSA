@@ -2,10 +2,10 @@
 
 import json
 def validate_json(json_string):
-    success=True
+    success = True
     try:
-        _=  json.loads(json_string)
+        _ = json.loads(json_string)
     except: # pylint: disable=bare-except
-        success=False
+        success = False
     print(success)
     assert success,"Invalid JSON"
