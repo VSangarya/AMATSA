@@ -10,6 +10,8 @@
 ![Languages](https://img.shields.io/github/languages/count/VSangarya/AMATSA)
 ![Repo Size](https://img.shields.io/github/repo-size/VSangarya/AMATSA)
 ![Contributors](https://img.shields.io/github/contributors/VSangarya/AMATSA)
+[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/4d32b2c8032341409d0f8a73a1b2a3d1)](https://www.codacy.com/gh/VSangarya/AMATSA/dashboard?utm_source=github.com&utm_medium=referral&utm_content=VSangarya/AMATSA&utm_campaign=Badge_Coverage)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/4d32b2c8032341409d0f8a73a1b2a3d1)](https://www.codacy.com/gh/VSangarya/AMATSA/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=VSangarya/AMATSA&amp;utm_campaign=Badge_Grade)
 
 Asset Monitoring and Analytics Tool for System Administrators
 
