@@ -1,7 +1,7 @@
-"""Tests for the System module"""
+"""Tests for the Disk module"""
 from src.disk import Disk
 
-def test_system_init():
+def test_disk_init():
     success = True
     try:
         _ = Disk()

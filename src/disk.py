@@ -27,7 +27,7 @@ class Disk:
             each_disk["type"] = self.check_attr(x,"fstype")
             each_disk["total_size"] = size_in_gb(self.check_attr(dsk,"total"))
             each_disk["used"] = size_in_gb(self.check_attr(dsk,"used"))
-            each_disk["free"] = 0#size_in_gb(self.check_attr(dsk,"free"))
+            each_disk["free"] = size_in_gb(self.check_attr(dsk,"free"))
             each_disk["percentage"] = self.check_attr(dsk,"percent")
 
             self.data["disk"].append(each_disk)
