@@ -26,7 +26,7 @@ jobs:
                   sudo apt-get install python3-sphinx
                   sudo rm code.rst
                   sudo rm modules.rst
-                  sphinx-apidoc -o . ../code/
+                  sphinx-apidoc -o . ../src/
                   make html
                   cd ..
                   git config --global user.name "qureshi-ali"
