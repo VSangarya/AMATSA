@@ -22,12 +22,11 @@ class Disk:
     def format_darwin(self, data):
         disk_nums = [ [] for i in range(len(data["disk"]))]
         for i in range(0,len(disk_nums)):
-            result = re.search("/dev/disk(\d+)s", data["disk"][i]["name"])
+            result = re.search(r"/dev/disk(\d+)s", data["disk"][i]["name"])
             if result is not None:
                 result = int(result.group(0).replace("/dev/disk","").replace("s",""))
                 data["disk"][i]["number"] = result
                 disk_nums[result].append(data["disk"][i])
-    
         res = [ele for ele in disk_nums if ele != []]
 
         final_disk = []
@@ -38,7 +37,7 @@ class Disk:
             free = each_disk[0]["free"]
             name = "/dev/disk"+str(each_disk[0]["number"])
             type = each_disk[0]["type"]
-            percentage = round((used/total_size)*100,2)
+            percentage = round((used/total_size)*100,2) # pylint: disable=W0622
 
             summed_disk ={
                 "name" : name,
@@ -69,9 +68,10 @@ class Disk:
 
             self.data["disk"].append(each_disk)
 
-
-        if self.sys.platform_name == "Darwin":
+        if self.sys.platform_name == "Darwin" :
             self.data["disk"] = self.format_darwin(self.data)
 
         return self.data["disk"]
+
+
 
