@@ -9,7 +9,7 @@ import os
 import yaml
 import datetime
 from elasticsearch import Elasticsearch
-
+import tests.driver_tests
 
 
 
@@ -42,6 +42,7 @@ if __name__ == "__main__":
     # print(client_json)
     client_json["network"]=network
     client_json=json.dumps(client_json,indent = 2)
+    tests.driver_tests.validate_json(client_json)
     print("final_json",client_json)
     es = Elasticsearch(hosts = config["connect"]["endpoint"],ssl_assert_fingerprint=config["connect"]["tls-fingerprint"],basic_auth = token)
     resp = es.index(index = config["index"]["name"], document = client_json)
