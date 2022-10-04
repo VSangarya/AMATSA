@@ -11,8 +11,11 @@ This page lists the guidelines to keep in mind while working with files in this 
   - [Getting Started](#getting-started)
     - [Branching Strategy](#branching-strategy)
     - [Style Guides](#style-guides)
+    
   - [How to report an issue?](#how-to-report-an-issue)
+    
   - [How to create a pull request?](#how-to-create-a-pull-request)
+    
   - [Contributors](#contributors)
 
   </p>
@@ -33,7 +36,7 @@ To work on a new feature or bugfix:
 ### Style Guides
 This project uses Python linter to ensure the code style is uniform and conforms to a well known syntactical style. [Pylint analyser](https://pylint.pycqa.org/en/latest/)
 
-## How to report an issue?
+## How to report an issue 
 This project uses [GitHub Issues](https://github.com/VSangarya/AMATSA/issues) to track bugs. 
 
 ### Before you report an issue
@@ -44,13 +47,13 @@ This project uses [GitHub Issues](https://github.com/VSangarya/AMATSA/issues) to
 1. Give a clear and concise summary to the issue.
 2. Add labels that seem fit to the issue.
 3. A good report has the following sections:
-    - Steps to reproduce the problem (if any)
-    - Expected behavior
-    - Actual behavior
-    - Any special case where this issue is encountered (if any)
-    - Additional notes (if any)
+   -Steps to reproduce the problem (if any)
+   -Expected behavior
+   -Actual behavior
+   -Any special case where this issue is encountered (if any)
+   -Additional notes (if any)
 
-## How to create a pull request?
+## How to create a pull request
 - Target your pull request to `main` branch.
 - Give a concise summary and a short description of what changed in files that have beed added/modified.
 - Link the issue to the pull request if fixing a reported bug.
