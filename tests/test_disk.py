@@ -47,8 +47,8 @@ def test_disk_values():
 
 def test_disk_darwin_sum():
     success = True
-    to_summarize_data = {"disk" : [{"name": "/dev/disk1s1s1", "type": "apfs", "total_size": 10, "used": 2, "free": 8, "percentage": 2}, 
-                                    { "name": "/dev/disk1s2", "type": "apfs", "total_size": 10, "used": 2, "free": 8, "percentage": 2}]}
+    to_summarize_data = {"disk" : [{"name": "/dev/disk1s1s1", "type": "apfs", "total_size": 10, "used": 2, "free": 8, "percentage": 2},
+                                   {"name": "/dev/disk1s2", "type": "apfs", "total_size": 10, "used": 2, "free": 8, "percentage": 2}]}
     data_to_be_returned = [{"name": "/dev/disk1", "type": "apfs", "total_size": 10, "used": 2, "free": 8, "percentage": 20.0}]
     try:
         disk = Disk()
