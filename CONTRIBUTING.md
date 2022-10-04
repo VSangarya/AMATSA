@@ -11,7 +11,7 @@ This page lists the guidelines to keep in mind while working with files in this 
   - [Getting Started](#getting-started)
     - [Branching Strategy](#branching-strategy)
     - [Style Guides](#style-guides)
-    
+ 
   - [How to report an issue?](#how-to-report-an-issue)
     
   - [How to create a pull request?](#how-to-create-a-pull-request)
@@ -45,7 +45,9 @@ This project uses [GitHub Issues](https://github.com/VSangarya/AMATSA/issues) to
 
 ### Submitting a bug report
 1. Give a clear and concise summary to the issue.
+
 2. Add labels that seem fit to the issue.
+
 3. A good report has the following sections:
    -Steps to reproduce the problem (if any)
    -Expected behavior
