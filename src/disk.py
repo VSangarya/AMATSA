@@ -37,7 +37,7 @@ class Disk:
             free = each_disk[0]["free"]
             name = "/dev/disk"+str(each_disk[0]["number"])
             type = each_disk[0]["type"] # pylint: disable=W0622
-            percentage = round((used/total_size)*100,2) 
+            percentage = round((used/total_size)*100,2)
 
             summed_disk ={
                 "name" : name,
