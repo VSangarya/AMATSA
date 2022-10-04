@@ -21,7 +21,7 @@ jobs:
             - uses: actions/checkout@v2
             - name: Build documentation and commit
               run: |
-                  git pull
+                  git pull origin main
                   cd docs/
                   sudo apt-get install python3-sphinx
                   sudo rm code.rst
