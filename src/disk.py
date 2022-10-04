@@ -1,7 +1,7 @@
 """This module fetches disk information and returns a JSON with the disk data"""
 import psutil
-from utils import size_in_gb
-from system import System
+from src.utils import size_in_gb
+from src.system import System
 import re
 
 class Disk:
