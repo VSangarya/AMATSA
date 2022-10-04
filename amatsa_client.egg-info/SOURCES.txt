@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+amatsa_client.egg-info/PKG-INFO
+amatsa_client.egg-info/SOURCES.txt
+amatsa_client.egg-info/dependency_links.txt
+amatsa_client.egg-info/top_level.txt
+src/__init__.py
+src/disk.py
+src/driver.py
+src/network.py
+src/system.py
+src/utils.py
+tests/__init__.py
+tests/test_system.py
