@@ -1,4 +1,4 @@
-'''Client Code integrates all metrics and send to Elastic Server'''
+"""Client Code integrates all metrics and send to Elastic Server"""
 
 import json
 # from xmlrpc import client
