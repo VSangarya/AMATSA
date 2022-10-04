@@ -65,3 +65,4 @@ class Network:
         json["down_speed"] = self.down_speed
         json["up_speed"] = self.up_speed
         json["time_now"] = self.time_now
+        
