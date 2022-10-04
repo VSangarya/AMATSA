@@ -111,14 +111,14 @@ Setting up the client is very easy! 😉 Yes, we took care of that!!! The client
 ### Steps
 1.  Download or clone this repository and cd to the cloned directory.
 2.  Clients use the YAML file in `src/config/amatsa-client.yml` to read configuration. **You should change these parameters depending on how you are setting up the Elasticsearch server**. Configuration includes:
-*    version - For client version tracking. You can leave this as it is!
-*    endpoint - Elasticsearch endpoint used by client used to push collected data. Give the HTTPS endpoint where your Elasticsearch is running. Elasticsearch v8.4 uses TLS by default and it is **recommended** to not downgrade to HTTP.
-*    tls-fingerprint - To verify authenticity of Elasticsearch server. The tls-fingerprint can be retrieved from the Elasticsearch server using this command:
+*   version: For client version tracking. You can leave this as it is!
+*   endpoint: Elasticsearch endpoint used by client used to push collected data. Give the HTTPS endpoint where your Elasticsearch is running. Elasticsearch v8.4 uses TLS by default and it is **recommended** to not downgrade to HTTP.
+*   tls-fingerprint: To verify authenticity of Elasticsearch server. The tls-fingerprint can be retrieved from the Elasticsearch server using this command:
 ```
 openssl x509 -fingerprint -sha256 -in /etc/elasticsearch/certs/http_ca.crt
 ```
-*    username, password - Authentication to write to Elasticsearch. This is the client username and password you configured for role `agent`.
-*    index - Document will be written to this index in Elasticsearch. **Tip**: To skip this step altogether, you can edit this config file before deploying the repository to clients!
+*   username, password: Authentication to write to Elasticsearch. This is the client username and password you configured for role `agent`.
+*   index: Document will be written to this index in Elasticsearch. **Tip**: To skip this step altogether, you can edit this config file before deploying the repository to clients!
 3.  Take ownership of script deploy.sh using `chmod +x deploy.sh`
 4.  If you want the metric collection to happen every 30 mins, you should run `./deploy.sh 30`. Pass a value of X to the deploy.sh script depending on the client workload and how frequently you want to update.
 5.  Your client should be up and running by now!
