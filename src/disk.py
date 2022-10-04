@@ -75,3 +75,4 @@ class Disk:
             self.data["disk"] = self.format_darwin(self.data)
 
         return self.data["disk"]
+        
