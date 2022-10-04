@@ -22,6 +22,11 @@ Asset Monitoring and Analytics Tool for sysadmins (we call it AMATSA) is a clien
 *  Monitor assets running out of disk space.
 *  Monitor network speed of assets across the organization.
 
+## 🛠 Installation
+*  See [server installation](INSTALL.md#-client) instructions to setup Elasticsearch and Kibana.
+*  See [client installation](INSTALL.md#-client) instructions to deploy amatsa-client on assets.
+*  Once the server and the clients are setup, you can import and explore our pre-built Kibana dashboards.
+
 ## 👩🏼‍💻 🚀 Developer Environment Setup
 ### Prerequisites
 1. Python 3.10+
@@ -34,11 +39,3 @@ Linux/MacOS:  `source .venv/bin/activate`<br/>
 Windows:  `source .venv/Scripts/activate`<br/>
 4. Install Python dependencies
 `pip install -r requirements.txt`
-## 💻 Python Client
-See [client installation](INSTALL.md#-client) instructions.
-1. Clients use the YAML file in `src/config/amatsa-client.yml` to read configuration. Configuration includes:
-* version - client version
-* endpoint - elastic endpoint client uses to push collected data
-* tls-fingerprint - verify authenticity of Elasticsearch server
-* username, password - authentication to write to Elasticsearch
-* index - index where document will be written in Elasticsearch

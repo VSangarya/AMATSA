@@ -5,6 +5,7 @@ import platform
 import psutil
 import sys
 import time
+import uuid
 from datetime import datetime
 from src.utils import size_in_gb
 
@@ -13,6 +14,7 @@ UNKNOWN = "unknown"
 class System:
     """Defines methods to retrieve machine info"""
     hostname = None
+    bios_uuid = None
     platform_name = None
     release = None
     version = None
@@ -27,6 +29,10 @@ class System:
         self.hostname = platform.node()
         if not self.hostname:
             self.hostname = UNKNOWN
+
+        self.bios_uuid = str(uuid.UUID(int=uuid.getnode()))
+        if not self.bios_uuid:
+            self.bios_uuid = self.hostname
 
         # platform - Windows, Linux, Darwin etc.
         # release - NT, 2.2.0, 21.6.0
@@ -65,6 +71,7 @@ class System:
 
     def FillSystemInfo(self, json: dict):
         json["hostname"] = self.hostname
+        json["bios_uuid"] = self.bios_uuid
         json["platform"] = self.platform_name
         json["release"] = self.release
         json["version"] = self.version

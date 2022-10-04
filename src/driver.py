@@ -1,13 +1,12 @@
 '''Client Code integrates all metrics and send to Elastic Server'''
 
 import json
-# from xmlrpc import client
 import disk
 import system
 import network
 import os
 import yaml
-import datetime
+from datetime import datetime
 from elasticsearch import Elasticsearch
 import tests.driver_tests
 
@@ -20,7 +19,7 @@ if __name__ == "__main__":
         config = yaml.safe_load(file)
 # collect data
     version = config["version"]
-    client_json["metadata"] = {"version" : version, "time" : str(datetime.datetime.now().isoformat()[:-3]+"Z")}
+    client_json["metadata"] = {"version": version, "time": datetime.utcnow().isoformat() + "Z"}
     token = (config["auth"]["username"], config["auth"]["password"])
     # client_id=str((gma()))
     # client_json["id"]=client_id
