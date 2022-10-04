@@ -1,3 +1,4 @@
+
 ---
 name: Bug report
 about: Create a report to help us improve
@@ -23,7 +24,7 @@ A concise description of what happens when you reproduce the behavior.
 If applicable, add screenshots to help explain your problem.
 
 **Desktop (please complete the following information):**
- - OS: [e.g. Linux, Windows, macOS]
+OS: e.g. Linux, Windows, macOS
 
 **Additional context**
 Add any other context about the problem here.
