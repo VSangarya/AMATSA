@@ -5,6 +5,7 @@ import disk
 import system
 import network
 import os
+import gpu
 import yaml
 from datetime import datetime
 from elasticsearch import Elasticsearch
@@ -33,16 +34,20 @@ if __name__ == "__main__":
     client_system.FillSystemMetrics(json=metrics)
     client_json["agent"] = agent
     client_json["metrics"] = metrics
-    #More code for other metrics
     n = network.Network()
     n.get_network_info()
     network = {}
     n.fill_network_info(network)
     # print(client_json)
     client_json["network"] = network
+    client_gpu = gpu.GPUdata()
+    gpu_info=client_gpu.retrieve_gpu_info()
+    if len(gpu_info)==0:
+        gpu_info=None
+    client_json["gpu"]=gpu_info
     client_json = json.dumps(client_json,indent = 2)
     tests.driver_tests.validate_json(client_json)
     print("final_json", client_json)
-    es = Elasticsearch(hosts = config["connect"]["endpoint"],ssl_assert_fingerprint=config["connect"]["tls-fingerprint"],basic_auth = token)
+    es = Elasticsearch(hosts = config["connect"]["endpoint"], ssl_assert_fingerprint=config["connect"]["tls-fingerprint"],basic_auth = token)
     resp = es.index(index = config["index"]["name"], document = client_json)
 
