@@ -107,7 +107,7 @@ POST _security/user/<username>
 ## 💻 Client
 Setting up the client is very easy! 😉 Yes, we took care of that!!! The client is a python script that sends updates about system metrics to your Elasticsearch every X mins. We don't tamper your client's Python installations. We setup our own virtual environments and execute inside that. We use the task scheduler (or cronjob) to schedule the client scripts to run.
 ### Prerequisites
-*  Python 3.10+
+*  Python 3.10+ (symlinked to python)
 ### Steps
 1.  Download or clone this repository and cd to the cloned directory.
 2.  Clients use the YAML file in `src/config/amatsa-client.yml` to read configuration. **You should change these parameters depending on how you are setting up the Elasticsearch server**. Configuration includes:
