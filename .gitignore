@@ -2,6 +2,7 @@
 ## python virtual environment
 .venv
 __pycache__
+amatsa_client.egg-info
 
 # files
 __pycache__/
