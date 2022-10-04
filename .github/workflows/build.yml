@@ -31,8 +31,14 @@ jobs:
       - name: Run tests and coverage report
         run: |       
           coverage run --data-file tests/.coverage -m pytest -s
-          coverage json --data-file tests/.coverage -o tests/coverage.json
+          coverage xml --data-file tests/.coverage -o tests/coverage.xml
           coverage report --data-file tests/.coverage
+          
+      - name : Send coverae report
+        run: |
+          pip install codacy-coverage
+          export CODACY_PROJECT_TOKEN=f5340974501b456c81717f90c4a51109
+          python-codacy-coverage -r tests/coverage.xml
           
       - name: Build package
         run: |
