@@ -54,12 +54,12 @@ class System:
         self.is_x64 = sys.maxsize > 2**32
 
         # physical cpu cores
-        self.physical_cores = psutil.cpu_count(logical = False)
+        self.physical_cores = psutil.cpu_count(logical=False)
         if not self.physical_cores:
             self.physical_cores = UNKNOWN
 
         # logical cpu cores
-        self.logical_cores = psutil.cpu_count(logical = True)
+        self.logical_cores = psutil.cpu_count(logical=True)
         if not self.logical_cores:
             self.logical_cores = UNKNOWN
 
@@ -69,6 +69,7 @@ class System:
         if not self.total_memory:
             self.total_memory = UNKNOWN
 
+    # This method fills the colelcted system info from the object's attributes
     def FillSystemInfo(self, json: dict):
         json["hostname"] = self.hostname
         json["bios_uuid"] = self.bios_uuid

@@ -9,7 +9,7 @@
 ![Languages](https://img.shields.io/github/languages/count/VSangarya/AMATSA)
 [![Code Size](https://img.shields.io/github/languages/code-size/VSangarya/AMATSA)](src)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE-OF-CONDUCT.md)
-[![Repo Size](https://img.shields.io/github/repo-size/VSangarya/AMATSA)](.)
+[![Repo Size](https://img.shields.io/github/repo-size/VSangarya/AMATSA)](https://github.com/VSangarya/AMATSA/)
 
 Have you ever reported to your organization's IT team that your machine is slow or running out of disk space? Well, I guess most of us have done this at some point. What if your IT team can be proactive and give you a new disk (or a new asset to meet your workload!) before you even go to them?
 

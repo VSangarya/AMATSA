@@ -15,13 +15,15 @@ If you want to skip the official documentation and quickly get hands-on, simply 
 
 ### Create Index, Roles and Users
 1. Access Kibana from your browser at https://<ip-address:port-number> and login with the built-in account `elastic`. Navigate to Management and then Dev Tools.
+
 2. Create index *amatsa*
 `PUT /amatsa`
-2. Create roles to access the index:<br/>
+
+3. Create roles to access the index:<br/>
 a. **admin**: This role has full access to index `amatsa` and kibana<br/>
 b. **analyst**: This role has read access to index `amatsa` and kibana<br/>
 c. **agent**: This role has write access to index `amatsa`<br/>
-```
+```Text
 POST _security/role/admin
 {
   "indices": [
@@ -48,7 +50,7 @@ POST _security/role/admin
   ]
 }
 ```
-```
+```Text
 POST _security/role/analyst
 {
   "indices": [
@@ -76,7 +78,7 @@ POST _security/role/analyst
   ]
 }
 ```
-```
+```Text
 POST _security/role/agent
 {
   "indices": [
@@ -92,7 +94,7 @@ POST _security/role/agent
 }
 ```
 4. Create one user account for each of the roles created
-```
+```Text
 POST _security/user/<username>
 {
   "roles": [
