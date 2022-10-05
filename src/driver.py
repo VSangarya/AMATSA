@@ -4,10 +4,10 @@ import json
 import os
 import sys
 import yaml
-from datetime import datetime
+#from datetime import datetime
 from elasticsearch import Elasticsearch
-# import tests.test_driver
-from unittest import TestCase
+import tests.test_driver
+#from unittest import TestCase
 from src.disk import Disk
 from src.system import System
 from src.network import Network
@@ -69,10 +69,6 @@ if __name__ == "__main__":
     # client_json["id"]=client_id
     if not CollectMetrics(client_json):
         sys.exit(1)
-    # tests.test_driver.test_json_validation()
-    print("final_json", client_json)
-    es = Elasticsearch(hosts=config["connect"]["endpoint"], ssl_assert_fingerprint=config["connect"]["tls-fingerprint"], basic_auth=token)
-    resp = es.index(index=config["index"]["name"], document=client_json)
     try:
         # push to elastic
         es = Elasticsearch(hosts=config["connect"]["endpoint"], ssl_assert_fingerprint=config["connect"]["tls-fingerprint"], basic_auth=token)
