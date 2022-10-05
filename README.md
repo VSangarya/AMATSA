@@ -42,4 +42,16 @@ Linux/MacOS:  `source .venv/bin/activate`<br/>
 Windows:  `source .venv/Scripts/activate`<br/>
 
 4. Install Python dependencies
-`pip install -r requirements.txt`
+```Text
+pip install -r requirements.txt
+pip install -e .
+```
+
+## ↑ Enhancements
+### Server
+*  Send emails to users based on occurrence of an event.
+
+### Client
+*  Collect running process information (name, pid) to identify unique instances across your organization.
+*  Monitor listening ports across assets to identify which services are listening in your network.
+*  Configure a rule file containing filenames to monitor on the client. If the hash of monitored file changes, you can send an event.
