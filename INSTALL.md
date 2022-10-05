@@ -15,13 +15,15 @@ If you want to skip the official documentation and quickly get hands-on, simply 
 
 ### Create Index, Roles and Users
 1. Access Kibana from your browser at https://<ip-address:port-number> and login with the built-in account `elastic`. Navigate to Management and then Dev Tools.
+
 2. Create index *amatsa*
 `PUT /amatsa`
-2. Create roles to access the index:<br/>
+
+3. Create roles to access the index:<br/>
 a. **admin**: This role has full access to index `amatsa` and kibana<br/>
 b. **analyst**: This role has read access to index `amatsa` and kibana<br/>
 c. **agent**: This role has write access to index `amatsa`<br/>
-```
+```Text
 POST _security/role/admin
 {
   "indices": [
@@ -48,7 +50,7 @@ POST _security/role/admin
   ]
 }
 ```
-```
+```Text
 POST _security/role/analyst
 {
   "indices": [
@@ -76,7 +78,7 @@ POST _security/role/analyst
   ]
 }
 ```
-```
+```Text
 POST _security/role/agent
 {
   "indices": [
@@ -92,7 +94,7 @@ POST _security/role/agent
 }
 ```
 4. Create one user account for each of the roles created
-```
+```Text
 POST _security/user/<username>
 {
   "roles": [
@@ -103,6 +105,7 @@ POST _security/user/<username>
   "password": "password"
 }
 ```
+5. Setup [runtime fields](data/index/runtime_fields.md) for your index after installing one client.
 
 ## 💻 Client
 Setting up the client is very easy! 😉 Yes, we took care of that!!! The client is a python script that sends updates about system metrics to your Elasticsearch every X mins. We don't tamper your client's Python installations. We setup our own virtual environments and execute inside that. We use the task scheduler (or cronjob) to schedule the client scripts to run.
@@ -114,7 +117,7 @@ Setting up the client is very easy! 😉 Yes, we took care of that!!! The client
 *   version: For client version tracking. You can leave this as it is!
 *   endpoint: Elasticsearch endpoint used by client used to push collected data. Give the HTTPS endpoint where your Elasticsearch is running. Elasticsearch v8.4 uses TLS by default and it is **recommended** to not downgrade to HTTP.
 *   tls-fingerprint: To verify authenticity of Elasticsearch server. The tls-fingerprint can be retrieved from the Elasticsearch server using this command:
-```
+```Text
 openssl x509 -fingerprint -sha256 -in /etc/elasticsearch/certs/http_ca.crt
 ```
 *   username, password: Authentication to write to Elasticsearch. This is the client username and password you configured for role `agent`.

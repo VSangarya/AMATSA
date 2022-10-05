@@ -24,17 +24,18 @@ jobs:
       - name: Install Python Dependencies
         run: |
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install -e .
       - name: Run linter on src directory
         run: |
           pylint --rcfile=pylintrc src
 
       - name: Run tests and coverage report
         run: |       
-          coverage run --data-file tests/.coverage -m pytest -s
+          coverage run --source=src --data-file tests/.coverage -m pytest -s
           coverage xml --data-file tests/.coverage -o tests/coverage.xml
-          coverage report --data-file tests/.coverage
+          coverage report --data-file tests/.coverage -m
           
-      - name : Send coverae report
+      - name : Send coverage report
         run: |
           pip install codacy-coverage
           export CODACY_PROJECT_TOKEN=f5340974501b456c81717f90c4a51109
@@ -42,7 +43,3 @@ jobs:
           export CODACY_USERNAME=VSangarya
           export CODAY_PROJECT_NAME=AMATSA
           python-codacy-coverage -r tests/coverage.xml
-          
-      - name: Build package
-        run: |
-          echo "Build package here"
