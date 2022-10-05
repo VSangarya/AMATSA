@@ -29,28 +29,24 @@ def CollectMetrics(obj: dict) -> bool:
         # disk info
         client_disk_info = fs.retrieve_disk_info()
         obj["disk"] = client_disk_info
-
         # system info
         sy.FillSystemInfo(json=agent)
         sy.FillSystemMetrics(json=metrics)
         obj["agent"] = agent
         obj["metrics"] = metrics
-
         # network info
         net.get_network_info()
         net.fill_network_info(netw)
         obj["network"] = netw
-        
         #gpu info
         client_gpu = GPUdata()
-        gpu_info=client_gpu.retrieve_gpu_info()
-        if len(gpu_info) == 0:
+        gpu_info = client_gpu.retrieve_gpu_info()
+        if not gpu_info:
             gpu_info = None
         obj["gpu"] = gpu_info
-
+        #converting to json string
         obj = json.dumps(obj, indent=2)
         #print("final_json", obj)
-
     except ValueError:
         return False
 
@@ -69,6 +65,7 @@ if __name__ == "__main__":
     # client_json["id"]=client_id
     if not CollectMetrics(client_json):
         sys.exit(1)
+    tests.test_driver.test_json_validation()
     try:
         # push to elastic
         es = Elasticsearch(hosts=config["connect"]["endpoint"], ssl_assert_fingerprint=config["connect"]["tls-fingerprint"], basic_auth=token)

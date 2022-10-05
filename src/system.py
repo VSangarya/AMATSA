@@ -7,7 +7,7 @@ import sys
 import time
 import uuid
 from datetime import datetime
-from utils import size_in_gb
+from src.utils import size_in_gb
 
 UNKNOWN = "unknown"
 
