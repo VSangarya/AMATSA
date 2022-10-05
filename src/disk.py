@@ -1,7 +1,7 @@
 """This module fetches disk information and returns a JSON with the disk data"""
 import psutil
-from utils import size_in_gb
-from system import System
+from src.utils import size_in_gb
+from src.system import System
 import re
 
 class Disk:
@@ -11,7 +11,7 @@ class Disk:
         self.sys = System()
 
 
-    def check_attr(self,attr, val):
+    def check_attr(self, attr, val):
         """Check whether attribute for object present, if present, call and return data"""
         try:
             val = getattr(attr, val)
@@ -62,12 +62,12 @@ class Disk:
             dsk = psutil.disk_usage(x.mountpoint)
             each_disk = {}
 
-            each_disk["name"] = self.check_attr(x,"device")
-            each_disk["type"] = self.check_attr(x,"fstype")
-            each_disk["total_size"] = size_in_gb(self.check_attr(dsk,"total"))
-            each_disk["used"] = size_in_gb(self.check_attr(dsk,"used"))
-            each_disk["free"] = size_in_gb(self.check_attr(dsk,"free"))
-            each_disk["percentage"] = self.check_attr(dsk,"percent")
+            each_disk["name"] = self.check_attr(x, "device")
+            each_disk["type"] = self.check_attr(x, "fstype")
+            each_disk["total_size"] = size_in_gb(self.check_attr(dsk, "total"))
+            each_disk["used"] = size_in_gb(self.check_attr(dsk, "used"))
+            each_disk["free"] = size_in_gb(self.check_attr(dsk, "free"))
+            each_disk["percentage"] = self.check_attr(dsk, "percent")
 
             self.data["disk"].append(each_disk)
 
@@ -75,4 +75,3 @@ class Disk:
             self.data["disk"] = self.format_darwin(self.data)
 
         return self.data["disk"]
-        
