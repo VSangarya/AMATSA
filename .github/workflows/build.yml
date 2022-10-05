@@ -38,8 +38,8 @@ jobs:
       - name : Send coverage report
         run: |
           pip install codacy-coverage
-          export CODACY_PROJECT_TOKEN=f5340974501b456c81717f90c4a51109
-          export CODACY_API_TOKEN=TRUP6C0Kp48xxq4Zp3r2
+          export CODACY_PROJECT_TOKEN=${{ secrets.CODACY_PROJECT_TOKEN }}
+          export CODACY_API_TOKEN=${{ secrets.CODACY_API_TOKEN }}
           export CODACY_USERNAME=VSangarya
           export CODAY_PROJECT_NAME=AMATSA
           python-codacy-coverage -r tests/coverage.xml
