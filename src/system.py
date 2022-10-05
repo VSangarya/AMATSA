@@ -69,8 +69,8 @@ class System:
         if not self.total_memory:
             self.total_memory = UNKNOWN
 
-    # This method fills the colelcted system info from the object's attributes
     def FillSystemInfo(self, json: dict):
+        """This method fills the colelcted system info from the object's attributes"""
         json["hostname"] = self.hostname
         json["bios_uuid"] = self.bios_uuid
         json["platform"] = self.platform_name
@@ -82,8 +82,8 @@ class System:
         json["logical_cores"] = self.logical_cores
         json["total_memory_gb"] = self.total_memory
 
-    # This method fills information that is more prone to change
     def FillSystemMetrics(self, json: dict):
+        """This method fills system information that is more prone to change"""
         # cpu utilization in %
         cpu_load = [x/self.logical_cores * 100 for x in psutil.getloadavg()]
         json["cpu_load_5min"] = round(cpu_load[1], 2)

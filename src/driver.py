@@ -64,7 +64,7 @@ if __name__ == "__main__":
     try:
         # push to elastic
         es = Elasticsearch(hosts=config["connect"]["endpoint"],ssl_assert_fingerprint=config["connect"]["tls-fingerprint"],basic_auth=token)
-        resp = es.index(index=config["index"]["name"], document = client_json)
+        resp = es.index(index=config["index"]["name"], document=client_json)
     except ValueError:
         print("Failed to send data to backend", file=sys.stderr)
         sys.exit(1)
