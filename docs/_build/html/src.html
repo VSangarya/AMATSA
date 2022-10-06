@@ -38,26 +38,214 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">¶</a></h2>
 </section>
-<section id="src-disk-module">
-<h2>src.disk module<a class="headerlink" href="#src-disk-module" title="Permalink to this heading">¶</a></h2>
+<section id="module-src.disk">
+<span id="src-disk-module"></span><h2>src.disk module<a class="headerlink" href="#module-src.disk" title="Permalink to this heading">¶</a></h2>
+<p>This module fetches disk information and returns a JSON with the disk data</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.disk.Disk">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.disk.</span></span><span class="sig-name descname"><span class="pre">Disk</span></span><a class="headerlink" href="#src.disk.Disk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to fetch, format and return disk information</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.disk.Disk.check_attr">
+<span class="sig-name descname"><span class="pre">check_attr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.disk.Disk.check_attr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether attribute for object present, if present, call and return data</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.disk.Disk.format_darwin">
+<span class="sig-name descname"><span class="pre">format_darwin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.disk.Disk.format_darwin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Format disk data for MacOS, summarize all paritions into the disk it belons to</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.disk.Disk.retrieve_disk_info">
+<span class="sig-name descname"><span class="pre">retrieve_disk_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.disk.Disk.retrieve_disk_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrive disk information, format and return it</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="src-driver-module">
 <h2>src.driver module<a class="headerlink" href="#src-driver-module" title="Permalink to this heading">¶</a></h2>
 </section>
-<section id="src-gpu-module">
-<h2>src.gpu module<a class="headerlink" href="#src-gpu-module" title="Permalink to this heading">¶</a></h2>
+<section id="module-src.gpu">
+<span id="src-gpu-module"></span><h2>src.gpu module<a class="headerlink" href="#module-src.gpu" title="Permalink to this heading">¶</a></h2>
+<p>This module fetches GPU information and returns a JSON with the GPU data</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.gpu.GPUdata">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.gpu.</span></span><span class="sig-name descname"><span class="pre">GPUdata</span></span><a class="headerlink" href="#src.gpu.GPUdata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to fetch, format and return GPU information</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.gpu.GPUdata.check_attr">
+<span class="sig-name descname"><span class="pre">check_attr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.gpu.GPUdata.check_attr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.gpu.GPUdata.gpudata">
+<span class="sig-name descname"><span class="pre">gpudata</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#src.gpu.GPUdata.gpudata" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.gpu.GPUdata.retrieve_gpu_info">
+<span class="sig-name descname"><span class="pre">retrieve_gpu_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.gpu.GPUdata.retrieve_gpu_info" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="src-network-module">
-<h2>src.network module<a class="headerlink" href="#src-network-module" title="Permalink to this heading">¶</a></h2>
+<section id="module-src.network">
+<span id="src-network-module"></span><h2>src.network module<a class="headerlink" href="#module-src.network" title="Permalink to this heading">¶</a></h2>
+<p>This module fetches network information and returns a JSON with the network info data</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.network.Network">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.network.</span></span><span class="sig-name descname"><span class="pre">Network</span></span><a class="headerlink" href="#src.network.Network" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to fetch, format and return network information</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.network.Network.connect_status">
+<span class="sig-name descname"><span class="pre">connect_status</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.network.Network.connect_status" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.network.Network.connection_status">
+<span class="sig-name descname"><span class="pre">connection_status</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#src.network.Network.connection_status" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.network.Network.down_speed">
+<span class="sig-name descname"><span class="pre">down_speed</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#src.network.Network.down_speed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.network.Network.fill_network_info">
+<span class="sig-name descname"><span class="pre">fill_network_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.network.Network.fill_network_info" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.network.Network.get_network_info">
+<span class="sig-name descname"><span class="pre">get_network_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.network.Network.get_network_info" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.network.Network.hostname">
+<span class="sig-name descname"><span class="pre">hostname</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#src.network.Network.hostname" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.network.Network.ip_address">
+<span class="sig-name descname"><span class="pre">ip_address</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#src.network.Network.ip_address" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.network.Network.mac_address">
+<span class="sig-name descname"><span class="pre">mac_address</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#src.network.Network.mac_address" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.network.Network.speed_test">
+<span class="sig-name descname"><span class="pre">speed_test</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#src.network.Network.speed_test" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.network.Network.time_now">
+<span class="sig-name descname"><span class="pre">time_now</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#src.network.Network.time_now" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.network.Network.up_speed">
+<span class="sig-name descname"><span class="pre">up_speed</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#src.network.Network.up_speed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="src-system-module">
-<h2>src.system module<a class="headerlink" href="#src-system-module" title="Permalink to this heading">¶</a></h2>
+<section id="module-src.system">
+<span id="src-system-module"></span><h2>src.system module<a class="headerlink" href="#module-src.system" title="Permalink to this heading">¶</a></h2>
+<p>File contains definition for System class</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.system.System">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.system.</span></span><span class="sig-name descname"><span class="pre">System</span></span><a class="headerlink" href="#src.system.System" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Defines methods to retrieve machine info</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.system.System.FillSystemInfo">
+<span class="sig-name descname"><span class="pre">FillSystemInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.system.System.FillSystemInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method fills the colelcted system info from the object’s attributes</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.system.System.FillSystemMetrics">
+<span class="sig-name descname"><span class="pre">FillSystemMetrics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.system.System.FillSystemMetrics" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method fills system information that is more prone to change</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.system.System.bios_uuid">
+<span class="sig-name descname"><span class="pre">bios_uuid</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#src.system.System.bios_uuid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.system.System.hostname">
+<span class="sig-name descname"><span class="pre">hostname</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#src.system.System.hostname" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.system.System.is_x64">
+<span class="sig-name descname"><span class="pre">is_x64</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#src.system.System.is_x64" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.system.System.logical_cores">
+<span class="sig-name descname"><span class="pre">logical_cores</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#src.system.System.logical_cores" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.system.System.machine">
+<span class="sig-name descname"><span class="pre">machine</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#src.system.System.machine" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.system.System.physical_cores">
+<span class="sig-name descname"><span class="pre">physical_cores</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#src.system.System.physical_cores" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.system.System.platform_name">
+<span class="sig-name descname"><span class="pre">platform_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#src.system.System.platform_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.system.System.release">
+<span class="sig-name descname"><span class="pre">release</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#src.system.System.release" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.system.System.total_memory">
+<span class="sig-name descname"><span class="pre">total_memory</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#src.system.System.total_memory" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.system.System.version">
+<span class="sig-name descname"><span class="pre">version</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#src.system.System.version" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="src-utils-module">
-<h2>src.utils module<a class="headerlink" href="#src-utils-module" title="Permalink to this heading">¶</a></h2>
+<section id="module-src.utils">
+<span id="src-utils-module"></span><h2>src.utils module<a class="headerlink" href="#module-src.utils" title="Permalink to this heading">¶</a></h2>
+<p>File contains util methods used by all modules</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.utils.size_in_gb">
+<span class="sig-prename descclassname"><span class="pre">src.utils.</span></span><span class="sig-name descname"><span class="pre">size_in_gb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">byte</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#src.utils.size_in_gb" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </section>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this heading">¶</a></h2>
+<section id="module-src">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-src" title="Permalink to this heading">¶</a></h2>
 </section>
 </section>
 
