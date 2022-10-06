@@ -2,12 +2,11 @@
 
 rem change working dir to script directory
 cd /D "%~dp0"
+FOR /f %%p in ('where python') do SET PYTHONPATH=%%p
 python -m venv .venv
-source .venv/bin/activate
-source .venv/Scripts/activate
 pip install -r requirements.txt
 pip install -e .
-schtasks /f /create /tn amatsa-client /tr "%~dp0\.venv\bin\python.exe %~dp0\src\driver.py" /sc MINUTE /mo %1
+schtasks /f /create /tn amatsa-client /tr "%PYTHONPATH% %~dp0src\driver.py" /sc>
 
 exit /B 0
 
