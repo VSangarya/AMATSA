@@ -1,12 +1,12 @@
 version:  "1.0.0"
 
 connect:
-  endpoint: "https://35.157.35.122:9200"
-  tls-fingerprint: "A1:E8:04:77:DC:E0:A4:5C:AD:09:C3:37:76:AD:D8:25:9E:0D:81:68:59:2E:D2:23:F6:C8:02:45:99:68:0B:21"
+  endpoint: "https://XXX.XXX.XXX.XXX:XX"
+  tls-fingerprint: "<put-your-tls-fingerprint>"
 
 auth:
-  username: "client"
-  password: "givemeaccesstowrite"
+  username: "username"
+  password: "password"
 
 index:
   name: amatsa
