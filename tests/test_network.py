@@ -5,7 +5,7 @@ def test_network_init():
     success = True
     try:
         _ = Network()
-    except:
+    except:#pylint: disable=bare-except
         success = False
     assert success, "Failed to initialize Network()"
 
