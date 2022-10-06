@@ -22,7 +22,7 @@ def test_network_entries():
                 success = False
             else:
                 print(f"{k}:{v}, type:{type(v)}")
-    except:
+    except: #pylint: disable=bare-except
         success = False
     assert success, "Failed to collect Network info"
 
