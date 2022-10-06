@@ -21,7 +21,7 @@ def CollectMetrics(obj: dict) -> bool:
         # instances for data collection
         fs = Disk()
         sy = System()
-       # net = Network()
+        net = Network()
 
         # disk info
         client_disk_info = fs.retrieve_disk_info()
@@ -33,10 +33,10 @@ def CollectMetrics(obj: dict) -> bool:
         obj["agent"] = agent
         obj["metrics"] = metrics
 
-        # network info
-      #  net.get_network_info()
-     #   net.fill_network_info(netw)
-    #    obj["network"] = netw
+        #network info
+        net.get_network_info()
+        net.fill_network_info(netw)
+        obj["network"] = netw
 
         obj = json.dumps(obj, indent=2)
         #print("final_json", obj)
