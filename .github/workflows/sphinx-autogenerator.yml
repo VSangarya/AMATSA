@@ -17,12 +17,8 @@ jobs:
             - name: Build documentation and commit
               run: |
                   git pull origin remaking_docs --allow-unrelated-histories
-                  sudo apt-get install python3-sphinx
-                  cd docs/
-                  sudo rm src.rst
-                  sudo rm modules.rst
-                  cd ..
-                  sphinx -apidoc -f -o docs src
+                  sudo apt-get install python3-sphinx                
+                  sphinx-apidoc -f -o docs src
                   cd docs/
                   make html
                   cd ..
