@@ -33,7 +33,7 @@ def test_network_datatype():
         net_obj = Network()
         net_obj.get_network_info()
         net_obj.fill_network_info(json)
-    except:
+    except: #pylint: disable=bare-except
         print("Failed to collect Network metrics")
         success = False
     data_types = {"mac_address" : str, "ip_address" : str, "hostname" : str, "connection_status" : bool, "down_speed" : float, "up_speed" : float, "time_now" : str}
