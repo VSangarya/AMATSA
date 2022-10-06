@@ -17,11 +17,13 @@ jobs:
             - name: Build documentation and commit
               run: |
                   git pull origin remaking_docs --allow-unrelated-histories
-                  cd docs/
                   sudo apt-get install python3-sphinx
+                  cd docs/
                   sudo rm src.rst
                   sudo rm modules.rst
-                  sphinx-apidoc -f -o docs src
+                  cd ..
+                  sphin -apidoc -f -o docs src
+                  cd docs/
                   make html
                   cd ..
                   git config --global user.name "qureshi-ali"
