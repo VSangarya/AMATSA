@@ -1,0 +1,51 @@
+{
+    "metadata": {
+      "version": "1.0.0",
+      "time": "2022-10-06T19:12:38.505430Z"
+    },
+    "disk": [
+      {
+        "name": "/dev/disk1",
+        "type": "apfs",
+        "total_size": 0.49,
+        "used": 0.02,
+        "free": 0.47,
+        "percentage": 4.08
+      },
+      {
+        "name": "/dev/disk3",
+        "type": "apfs",
+        "total_size": 228.27,
+        "used": 53.17,
+        "free": 175.11,
+        "percentage": 23.29
+      }
+    ],
+    "agent": {
+      "hostname": "XXX-HOSTNAME",
+      "bios_uuid": "00000000-0000-0000-0000-027cbaddb73e",
+      "platform": "Darwin",
+      "release": "21.6.0",
+      "version": "Darwin Kernel Version 21.6.0: Mon Aug 22 20:20:05 PDT 2022; root:xnu-8020.140.49~2/RELEASE_ARM64_T8101",
+      "machine": "arm64",
+      "is64bit": true,
+      "physical_cores": 8,
+      "logical_cores": 8,
+      "total_memory_gb": 16
+    },
+    "metrics": {
+      "cpu_load_5min": 17.95,
+      "cpu_load_15min": 20.83,
+      "avail_memory_gb": 6.43,
+      "boot_days_ago": 23
+    },
+    "network": {
+      "mac_address": "02:7C:BA:DD:B7:3E",
+      "ip_address": "192.168.1.115",
+      "hostname": "XXX-HOSTNAME",
+      "connection_status": true,
+      "down_speed": 27.95,
+      "up_speed": 7.27,
+      "time_now": "15:12:39"
+    }
+}
