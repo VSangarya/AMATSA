@@ -42,3 +42,17 @@ def test_network_datatype():
             print(f"For data '{k}', type should be {data_types[k]}, not {type(v[k])}")
             success = False
     assert success
+
+def test_macadd():
+    success = True
+    json = {}
+    try:
+        net_obj = Network()
+        net_obj.get_network_info()
+        net_obj.fill_network_info(json)
+        if not re.match(r"([0-9a-fA-F]{2}[-:]){5}[0-9a-fA-F]{2}$",json["mac_address"],re.IGNORECASE):
+            success = False
+    except:
+        print("Invalid Mac address validation")
+        success = False
+    assert success
