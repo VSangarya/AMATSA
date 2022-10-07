@@ -68,8 +68,8 @@ if __name__ == "__main__":
     tests.test_driver.test_json_validation()
     try:
         # push to elastic
-        hosts_config=config["connect"]["endpoint"]
-        ssl_fingerprint=config["connect"]["tls-fingerprint"]
+        hosts_config = config["connect"]["endpoint"]
+        ssl_fingerprint = config["connect"]["tls-fingerprint"]
         es = Elasticsearch(hosts=hosts_config, ssl_assert_fingerprint=ssl_fingerprint, basic_auth=token)
         resp = es.index(index=config["index"]["name"], document=client_json)
     except ValueError:
