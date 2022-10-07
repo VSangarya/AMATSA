@@ -52,7 +52,7 @@ def test_macadd():
         net_obj.fill_network_info(json)
         if not re.match(r"([0-9a-fA-F]{2}[-:]){5}[0-9a-fA-F]{2}$",json["mac_address"],re.IGNORECASE):
             success = False
-    except:
+    except: #pylint: disable=bare-except
         print("Invalid Mac address validation")
         success = False
     assert success
