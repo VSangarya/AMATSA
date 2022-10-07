@@ -34,7 +34,7 @@ def CollectMetrics(obj: dict) -> bool:
         sy.FillSystemMetrics(json=metrics)
         obj["agent"] = agent
         obj["metrics"] = metrics
-        # network info
+        #network info
         net.get_network_info()
         net.fill_network_info(netw)
         obj["network"] = netw
