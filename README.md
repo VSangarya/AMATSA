@@ -39,7 +39,7 @@ Asset Monitoring and Analytics Tool for sysadmins (we call it AMATSA) is a clien
 
 3. Activate virtual environment:<br/>
 Linux/MacOS:  `source .venv/bin/activate`<br/>
-Windows:  `source .venv/Scripts/activate`<br/>
+Windows:  `.venv/Scripts/activate`<br/>
 
 4. Install Python dependencies
 ```Text
