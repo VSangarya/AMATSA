@@ -20,7 +20,7 @@ def test_gpu_datatype():
         success = False
     num = (float, int)
     data_types = {"gpu_name" : str, "uuid" : str, "serial_number" : num, "load" : num, "total_memory" : num,
-    "memory_used" : num, "memory_free" : num}
+                  "memory_used" : num, "memory_free" : num}
     for each in data:
         for field in each.keys():
             if not isinstance(each[field], data_types[field]) :
