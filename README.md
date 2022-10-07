@@ -23,6 +23,10 @@ Asset Monitoring and Analytics Tool for sysadmins (we call it AMATSA) is a clien
 *  Monitor assets running out of disk space.
 *  Monitor network speed of assets across the organization.
 
+## Workflow and 'How to Do Stuff'
+* The architecure of the system is shown below:
+![System Architecture](assets/system_architecture.jpg)
+
 ## 🛠 Installation
 *  See [server installation](INSTALL.md#-server) instructions to setup Elasticsearch and Kibana.
 *  See [client installation](INSTALL.md#-client) instructions to deploy amatsa-client on assets.
