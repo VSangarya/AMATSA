@@ -18,9 +18,7 @@ Asset Monitoring and Analytics Tool for sysadmins (we call it AMATSA) is a clien
 
 ## Setting up AMASTA on a PC and exploring the visualization dashboard
 
-
 https://user-images.githubusercontent.com/68890508/194654605-f23bc6a3-13ba-43b3-b41a-8d8b9015c583.mp4
-
 
 ## 📖 Usecases
 *  Gather asset information - how many assets are there in the organization, specification of each asset etc.
