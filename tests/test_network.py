@@ -1,5 +1,6 @@
 """Tests for the Network module"""
 from src.network import Network
+import re
 
 def test_network_init():
     success = True
