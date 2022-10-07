@@ -5,7 +5,7 @@ def test_disk_init():
     success = True
     try:
         _ = GPUdata()
-    except: # pylint: disable=bare-except
+    except Exception as e:
         success = False
     assert success, "Failed to initialize GPUdata()"
 
@@ -15,7 +15,7 @@ def test_gpu_datatype():
     try:
         gpu = GPUdata()
         data = gpu.retrieve_gpu_info()
-    except: # pylint: disable=bare-except
+    except Exception as e:
         print("Failed to collect Data metrics")
         success = False
     num = (float, int)
@@ -34,7 +34,7 @@ def test_disk_values():
     try:
         gpu = GPUdata()
         data = gpu.retrieve_gpu_info()
-    except: # pylint: disable=bare-except
+    except Exception as e:
         print("Failed to collect Data metrics")
         success = False
     fields = ["total_memory", "memory_used", "memory_free", "load"]
