@@ -1,11 +1,13 @@
 """Tests for the Disk module"""
 from src.gpu import GPUdata
 
-def test_disk_init():
+def test_gpu_init():
     success = True
     try:
         _ = GPUdata()
-    except: # pylint: disable=bare-except
+        if(_ == false):
+            raise TypeError
+    except TypeError: # pylint: disable=bare-except
         success = False
     assert success, "Failed to initialize GPUdata()"
 
@@ -15,7 +17,9 @@ def test_gpu_datatype():
     try:
         gpu = GPUdata()
         data = gpu.retrieve_gpu_info()
-    except: # pylint: disable=bare-except
+        if data == false:
+            raise TypeError
+    except TypeError: # pylint: disable=bare-except
         print("Failed to collect Data metrics")
         success = False
     num = (float, int)
@@ -34,7 +38,9 @@ def test_disk_values():
     try:
         gpu = GPUdata()
         data = gpu.retrieve_gpu_info()
-    except: #pylint : bare-except
+        if data == false:
+            raise TypeError
+    except TypeError: #pylint : bare-except
         print("Failed to collect Data metrics")
         success = False
     fields = ["total_memory", "memory_used", "memory_free", "load"]
