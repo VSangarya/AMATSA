@@ -5,7 +5,7 @@ def test_gpu_init():
     success = True
     try:
         _ = GPUdata()
-        if(_ == false):
+        if(_ == False):
             raise TypeError
     except TypeError: # pylint: disable=bare-except
         success = False
@@ -17,7 +17,7 @@ def test_gpu_datatype():
     try:
         gpu = GPUdata()
         data = gpu.retrieve_gpu_info()
-        if data == false:
+        if data == False:
             raise TypeError
     except TypeError: # pylint: disable=bare-except
         print("Failed to collect Data metrics")
@@ -38,7 +38,7 @@ def test_disk_values():
     try:
         gpu = GPUdata()
         data = gpu.retrieve_gpu_info()
-        if data == false:
+        if data == False:
             raise TypeError
     except TypeError: #pylint : bare-except
         print("Failed to collect Data metrics")
