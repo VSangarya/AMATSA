@@ -52,7 +52,6 @@ def CollectMetrics(obj: dict) -> bool:
 
 if __name__ == "__main__":
     client_json = {}
-    
     # read config from yml file
     with open(os.path.dirname(os.path.realpath(__file__)) + "/config/amatsa-client.yml", "r", encoding="utf-8") as file:
         config = yaml.safe_load(file)
