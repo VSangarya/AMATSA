@@ -4,9 +4,9 @@ import json
 import os
 import sys
 import yaml
-#from datetime import datetime
+from datetime import datetime
 from elasticsearch import Elasticsearch
-import tests.test_driver
+# import tests.test_driver
 #from unittest import TestCase
 from src.disk import Disk
 from src.system import System
@@ -45,8 +45,6 @@ def CollectMetrics(obj: dict) -> bool:
             gpu_info = None
         obj["gpu"] = gpu_info
         #converting to json string
-        obj = json.dumps(obj, indent=2)
-        #print("final_json", obj)
     except ValueError:
         return False
 
@@ -54,18 +52,19 @@ def CollectMetrics(obj: dict) -> bool:
 
 if __name__ == "__main__":
     client_json = {}
-
+    
     # read config from yml file
     with open(os.path.dirname(os.path.realpath(__file__)) + "/config/amatsa-client.yml", "r", encoding="utf-8") as file:
         config = yaml.safe_load(file)
-
     # collect meta-data fields
+    version=config["version"]
+    client_json["metadata"] = {"version": version, "time": datetime.utcnow().isoformat() + "Z"}
     token = (config["auth"]["username"], config["auth"]["password"])
-    # client_id=str((gma()))
-    # client_json["id"]=client_id
     if not CollectMetrics(client_json):
         sys.exit(1)
-    tests.test_driver.test_json_validation()
+    client_json = json.dumps(client_json, indent=2)
+    print("final_json", client_json)
+    print("client_json",client_json)
     try:
         # push to elastic
         hosts_config = config["connect"]["endpoint"]
