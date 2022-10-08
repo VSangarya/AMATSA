@@ -56,7 +56,7 @@ if __name__ == "__main__":
     with open(os.path.dirname(os.path.realpath(__file__)) + "/config/amatsa-client.yml", "r", encoding="utf-8") as file:
         config = yaml.safe_load(file)
     # collect meta-data fields
-    version=config["version"]
+    version = config["version"]
     client_json["metadata"] = {"version": version, "time": datetime.utcnow().isoformat() + "Z"}
     token = (config["auth"]["username"], config["auth"]["password"])
     if not CollectMetrics(client_json):
