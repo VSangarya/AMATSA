@@ -1,0 +1,30 @@
+name: sphinx-autogenerator
+
+on:
+    push:
+        branches:
+            - remaking_docs
+    pull_request:
+        branches:
+            - remaking_docs
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v2
+            - name: Build documentation and commit
+              run: |
+                  git pull origin remaking_docs
+                  sudo apt-get install python3-sphinx                
+                  sphinx-apidoc -f -o docs src
+                  cd docs/
+                  make html
+                  cd ..
+                  git config --global user.name "qureshi-ali"
+                  git config --global user.email "qureshi.ali@outlook.com"
+                  git add .
+                  git commit -m "updating docs" -a || true
+                  git push -u origin remaking_docs
+        # ===============================
