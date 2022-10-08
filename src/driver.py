@@ -63,7 +63,6 @@ if __name__ == "__main__":
         sys.exit(1)
     client_json = json.dumps(client_json, indent=2)
     print("final_json", client_json)
-    print("client_json",client_json)
     try:
         # push to elastic
         hosts_config = config["connect"]["endpoint"]
