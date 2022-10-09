@@ -21,7 +21,7 @@
 |Use of syntax checkers.|3| pylint runs on every pull request to check this.|
 |Use of code coverage |3|Coverage reports are generated in [build](https://github.com/VSangarya/AMATSA/blob/main/.github/workflows/build.yml) GitHub Action|
 |Other automated analysis tools|3|[Codacy](https://app.codacy.com/gh/VSangarya/AMATSA/dashboard?utm_source=github.com&utm_medium=referral&utm_content=VSangarya/AMATSA&utm_campaign=Badge_Grade) for static code analysis|
-|Test cases exist|3|Tests are written using Pytest [here]([test](https://github.com/VSangarya/AMATSA/tree/main/tests).|
+|Test cases exist|3|Tests are written using Pytest [here](https://github.com/VSangarya/AMATSA/tree/main/tests).|
 |Test cases are routinely executed|3|Tests are run every pull request by GitHub Actions|
 |The files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up|3|Info on style guide, branching strategies, how to raise a PR etc.|
 |Issues are discussed before they are closed|3|GitHub Issue and PR comments|
