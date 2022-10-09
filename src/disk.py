@@ -33,7 +33,7 @@ class Disk:
 
         final_disk = []
         for each_disk in res:
-            print(each_disk)
+            # print(each_disk)
             total_size = each_disk[0]["total_size"]
             used = each_disk[0]["used"]
             free = each_disk[0]["free"]
