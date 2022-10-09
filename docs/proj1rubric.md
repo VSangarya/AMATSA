@@ -32,10 +32,10 @@
 |Evidence that the whole team is using the same tools (e.g. tutor can ask anyone to share screen, they demonstrate the system running on their computer)|3|Code is deployed on every developer's PC|
 |Evidence that the members of the team are working across multiple places in the code base|3|Every dev has worked on writing code, tests, documentation. Evidence in commits.|
 |Short release cycles (hard to see in short projects) project members are committing often enough so that everyone can get your work|3|[Git branching strategy](https://github.com/VSangarya/AMATSA/blob/main/CONTRIBUTING.md#branching-strategy) and frequent [pull-requests](https://github.com/VSangarya/AMATSA/pulls?q=is%3Apr+is%3Aclosed)|
-|Question 1.1: Does your website and documentation provide a clear, high-level overview of your software?|---|---|
-|Question 1.2: Does your website and documentation clearly describe the type of user who should use your software?|---|---|
-|Question 1.3: Do you publish case studies to show how your software has been used by yourself and others?|---|---|
-|Question 2.1: Is the name of your project/software unique?|---|---|
+|Question 1.1: Does your website and documentation provide a clear, high-level overview of your software?|3|[Github](https://github.com/VSangarya/AMATSA/blob/main/README.md)|
+|Question 1.2: Does your website and documentation clearly describe the type of user who should use your software?|3| [Github](https://github.com/VSangarya/AMATSA/blob/main/README.md) Yes, primary type of users are System Admins and describes the usecases as well |
+|Question 1.3: Do you publish case studies to show how your software has been used by yourself and others?|1|Have shown the use cases, how it can be setup and how it can be improved|
+|Question 2.1: Is the name of your project/software unique?|3|Yes, no other GitHub projects or other software with the same name exist|
 |Question 2.2: Is your project/software name free from trademark violations?|---|---|
 |Question 3.1: Is your software available as a package that can be deployed without building it?|---|---|
 |Question 3.2: Is your software available for free?|---|---|
