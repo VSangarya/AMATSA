@@ -62,13 +62,13 @@ class Network:
             self.up_speed = UNKNOWN
         self.addresses = psutil.net_if_addrs()
         self.stats = psutil.net_if_stats()
-        self.connected_interface =UNKNOWN
+        self.connected_interface = UNKNOWN
         prefixes =["169.254","127."]
         for intface, addr_list in self.addresses.items():
             if any(getattr(addr, "address").startswith(tuple(prefixes)) for addr in addr_list):
                 continue
             elif intface in self.stats and getattr(self.stats[intface], "isup"):
-                self.connected_interface =intface
+                self.connected_interface = intface
 
     def fill_network_info(self, json: dict):
         json["mac_address"] = self.mac_address
