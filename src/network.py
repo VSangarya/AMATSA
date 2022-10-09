@@ -74,6 +74,7 @@ class Network:
         json["mac_address"] = self.mac_address
         json["ip_address"] = self.ip_address
         json["hostname"] = self.hostname
+        json["connected_interface"] = self.connected_interface
         json["connection_status"] = self.connection_status
         json["down_speed"] = self.down_speed
         json["up_speed"] = self.up_speed
