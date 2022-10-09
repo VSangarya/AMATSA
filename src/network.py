@@ -65,7 +65,7 @@ class Network:
         self.connected_interface =UNKNOWN
         prefixes =["169.254","127."]
         for intface, addr_list in self.addresses.items():
-            if any(getattr(addr, 'address').startswith(tuple(prefixes)) for addr in addr_list):
+            if any(getattr(addr, "address").startswith(tuple(prefixes)) for addr in addr_list):
                 continue
             elif intface in self.stats and getattr(self.stats[intface], "isup"):
                 self.connected_interface =intface
