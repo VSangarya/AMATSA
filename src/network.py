@@ -63,7 +63,7 @@ class Network:
         self.addresses = psutil.net_if_addrs()
         self.stats = psutil.net_if_stats()
         self.connected_interface =UNKNOWN
-        prefixes =['169.254','127.']
+        prefixes =["169.254","127."]
         for intface, addr_list in self.addresses.items():
             if any(getattr(addr, 'address').startswith(tuple(prefixes)) for addr in addr_list):
                 continue
