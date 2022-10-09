@@ -25,7 +25,7 @@
 |Test cases are routinely executed|3|Tests are run every pull request by GitHub Actions|
 |The files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up|3|Info on style guide, branching strategies, how to raise a PR etc.|
 |Issues are discussed before they are closed|3|GitHub Issue and PR comments|
-|Chat channel: exists|3|[WhatsApp](chat.png)|
+|Chat channel: exists|3|[WhatsApp](Screenshot%202022-10-09%20at%2017.43.53.png)|
 |Test cases: a large proportion of the issues related to handling failing cases.|3|Bugs reported: Issue 27, 35, 10|
 |Evidence that the whole team is using the same tools: everyone can get to all tools and files|3|[dev environment setup](https://github.com/VSangarya/AMATSA#--developer-environment-setup), .vscode [dir](https://github.com/VSangarya/AMATSA/blob/main/.vscode/settings.json) for style configuration|
 |Evidence that the whole team is using the same tools (e.g. config files in the repo, updated by lots of different people)|2|Tools/Style and Style checkers were setup as the first commit. All devs pulled these settings. Hence, no further changes were made.|
