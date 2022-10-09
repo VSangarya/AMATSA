@@ -25,9 +25,11 @@ Asset Monitoring and Analytics Tool for sysadmins (we call it AMATSA) is a clien
 
 ## Workflow and 'How to Do Stuff'
 * The architecure of the system is shown below:
-![System Architecture](assets/system_architecture.jpg)
+    * ![System Architecture](assets/system_architecture.jpg)
     * The script installed at the client side collects client metrics and at fixed intervals and pushes these metrics as a JSON to the elastic server.
+
     * Kibana is connected to the Elastic Server from where it fetches the data and renders this data in the dashboards accessible by system administrators.
+
     * This update happens in realtime.
 
 * To use the system: 
@@ -35,7 +37,8 @@ Asset Monitoring and Analytics Tool for sysadmins (we call it AMATSA) is a clien
     * Follow the steps in [Installation](README.md#🛠-installation).
 
     * Adding new metrics:
-        * You can make changes to the classes in the 'src' directory to track additional metrics or remove metrics that are currently tracked.
+        * You can make changes to the classes in the 'src' directory to track additional metrics or   remove metrics that are currently tracked.
+
         * Leverage Kibana's convenient UI to create new dashboards as per your requirements.
 
     * View dashboards:
