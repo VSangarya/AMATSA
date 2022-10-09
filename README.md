@@ -23,6 +23,7 @@ Have you ever reported to your organization's IT team that your machine is slow 
 ## Setting up AMATSA on a PC and exploring the visualization dashboard
 Setting up amatsa-client to run periodically in the background can be completed in a couple of minutes and requires executing only few commands on the client.
 Adding new visualizations to the Kibana dashboard is straightforward and can be done with ease.
+
 https://user-images.githubusercontent.com/68890508/194654605-f23bc6a3-13ba-43b3-b41a-8d8b9015c583.mp4
 
 ## A sample view of the Kibana dashboard with the visualizations
