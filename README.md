@@ -18,26 +18,36 @@ Asset Monitoring and Analytics Tool for sysadmins (we call it AMATSA) is a clien
 
 ## 📖 Usecases
 *  Gather asset information - how many assets are there in the organization, specification of each asset etc.
+
 *  Monitor assets that haven't rebooted in a while to apply security patches.
+
 *  Monitor assets that have high CPU/memory utilization over time.
+
 *  Monitor assets running out of disk space.
+
 *  Monitor network speed of assets across the organization.
 
 ## Workflow and 'How to Do Stuff'
 * The architecure of the system is shown below:
 ![System Architecture](assets/system_architecture.jpg)
     * The script installed at the client side collects client metrics and at fixed intervals and pushes these metrics as a JSON to the elastic server.
+
     * Kibana is connected to the Elastic Server from where it fetches the data and renders this data in the dashboards accessible by system administrators.
+
     * This update happens in realtime.
+
 * To use the system: 
     * Follow the steps in [Installation](README.md#🛠-installation).
+
     * Adding new metrics:
         * You can make changes to the classes in the 'src' directory to track additional metrics or remove metrics that are currently tracked.
+
         * Leverage Kibana's convenient UI to create new dashboards as per your requirements.
+
     * View dashboards:
         * Access your AWS server using your browser.
+
         * Enter your Kibana credentials to view the dashboards.
-* 
 
 ## 🛠 Installation
 *  See [server installation](INSTALL.md#-server) instructions to setup Elasticsearch and Kibana.
