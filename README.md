@@ -84,8 +84,8 @@ pip install -e .
 For any help or assistance regarding the software, please E-mail any of the developers with the query or a detailed description. Additionally, please use issues on GitHub for any software related issues, bugs or questions.
 *  mquresh@ncsu.edu
 *  apandit3@ncsu.edu
-*  apandit3@ncsu.edu
 *  vnagara3@ncsu.edu
+*  schopra4@ncsu.edu
 *  lsangar@ncsu.edu
 
 

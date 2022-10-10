@@ -92,11 +92,11 @@ Do you have a contributions policy | 3 | [CONTRIBUTING.md](../CONTRIBUTING.md) |
 Is your contributions' policy publicly available? | 3 | [CONTRIBUTING.md](../CONTRIBUTING.md) | 
 Do contributors keep the copyright/IP of their contributions | 3 | Commits are public | 
 Website and documentation clearly states the copyright owners of your software and documentation | 3 | [README.md](https://github.com/VSangarya/AMATSA#-amatsa) | 
-Does each of your source code files include a copyright statement |  |  | 
+Does each of your source code files include a copyright statement | 0 |  | 
 The website and documentation clearly state the licence of your software | 3 | [LICENSE](../LICENSE) | 
 Software released under an open source licence | 3 | [LICENSE](../LICENSE) | 
 Software released under an OSI-approved open-source licence | 3 | [LICENSE](../LICENSE) | 
-Source code files include a licence header |  |  | 
+Source code files include a licence header | 0 |  | 
 Do you have a recommended citation for your software | 3 | Zenodo Badge in [README]((https://github.com/VSangarya/AMATSA#-amatsa)) | 
 Documentation includes a project roadmap (a list of project and development milestones for the next 3, 6 months) | 2 | Enhancements in [README]((https://github.com/VSangarya/AMATSA#-amatsa)) | 
 Documentation describe how the project is funded, and the period over which funding is guaranteed? | 3 | We used free tools hence no funding required | 
