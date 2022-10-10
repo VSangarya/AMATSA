@@ -25,7 +25,8 @@ jobs:
                   cd ..
                   git config --global user.name "qureshi-ali"
                   git config --global user.email "qureshi.ali@outlook.com"
-                  git add .
+                  git remote add origin https://github.com/VSangarya/AMATSA
+                  git add docs/*
                   git commit -m "updating docs" -a || true
                   git push origin ${GITHUB_REF##*/}
         # ===============================
