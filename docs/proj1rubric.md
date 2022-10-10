@@ -62,6 +62,7 @@ Software allows communications using open communications protocols | 3 | Yes, ou
 Software cross-platform compatible | 3 | Yes - Works on Windows, Mac, Ubuntu--- | 
 Software adhere to appropriate accessibility conventions or standards | --- | --- | 
 Documentation adheres to appropriate accessibility conventions or standards | 3 | yes  | 
+Source Code in a repository under revision control | 3 | Using git |
 Each source code releases a snapshot of the repository | 3 | Yes, we have multipe releases.| 
 Releases are tagged in the repository | 3 | --- | 
 There is a branch of the repository that is always stable | 3 | Main branch is always stable | 
