@@ -32,29 +32,29 @@
 |Evidence that the whole team is using the same tools (e.g. tutor can ask anyone to share screen, they demonstrate the system running on their computer)|3|Code is deployed on every developer's PC|
 |Evidence that the members of the team are working across multiple places in the code base|3|Every dev has worked on writing code, tests, documentation. Evidence in commits.|
 |Short release cycles (hard to see in short projects) project members are committing often enough so that everyone can get your work|3|[Git branching strategy](https://github.com/VSangarya/AMATSA/blob/main/CONTRIBUTING.md#branching-strategy) and frequent [pull-requests](https://github.com/VSangarya/AMATSA/pulls?q=is%3Apr+is%3Aclosed)|
-|Question 1.1: Does your website and documentation provide a clear, high-level overview of your software?|3|[Github](https://github.com/VSangarya/AMATSA/blob/main/README.md)|
-|Question 1.2: Does your website and documentation clearly describe the type of user who should use your software?|3| [Github](https://github.com/VSangarya/AMATSA/blob/main/README.md) Yes, primary type of users are System Admins and describes the usecases as well |
-|Question 1.3: Do you publish case studies to show how your software has been used by yourself and others?|1|Have shown the use cases, how it can be setup and how it can be improved|
-|Question 2.1: Is the name of your project/software unique?|3|Yes, no other GitHub projects or other software with the same name exist|
-|Question 2.2: Is your project/software name free from trademark violations?|3|Yes, no prior software, product, business, design or corporation with the name AMATSA exsists. Verified using Trademark Electronic Search System (TESS).|
-|Question 3.1: Is your software available as a package that can be deployed without building it?|---|---|
-|Question 3.2: Is your software available for free?|---|---|
-|Question 3.3: Is your source code publicly available to download, either as a downloadable bundle or via access to a source code repository?|---|---|
-|Question 3.4: Is your software hosted in an established, third-party repository likeGitHub (https://github.com), BitBucket (https://bitbucket.org),LaunchPad (https://launchpad.net) orSourceForge (https://sourceforge.net)?|---|---|
-|Question 4.1: Is your documentation clearly available on your website or within your software?|---|---|
-|Question 4.2: Does your documentation include a "quick start" guide, that provides a short overview of how to use your software with some basic examples of use?|---|---|
-|Question 4.3: If you provide more extensive documentation, does this provide clear, step-by-step instructions on how to deploy and use your software?|---|---|
-|Question 4.4: Do you provide a comprehensive guide to all your software’s commands, functions and options?|---|---|
-|Question 4.5: Do you provide troubleshooting information that describes the symptoms and step-by-step solutions for problems and error messages?|---|---|
-|Question 4.6: If your software can be used as a library, package or service by other software, do you provide comprehensive API documentation?|---|---|
-|Question 4.7: Do you store your documentation under revision control with your source code?|---|---|
-|Question 4.8: Do you publish your release history e.g. release data, version numbers, key features of each release etc. on your web site or in your documentation?|---|---|
-|Question 5.1: Does your software describe how a user can get help with using your software?|---|---|
-|Question 5.2: Does your website and documentation describe what support, if any, you provide to users and developers?|---|---|
-|Question 5.3: Does your project have an e-mail address or forum that is solely for supporting users?|---|---|
-|Question 5.4: Are e-mails to your support e-mail address received by more than one person?|---|---|
-|Question 5.5: Does your project have a ticketing system to manage bug reports and feature requests?|---|---|
-|Question 5.6: Is your project's ticketing system publicly visible to your users, so they can view bug reports and feature requests?|---|---|
+| Does your website and documentation provide a clear, high-level overview of your software?|3|[Github](https://github.com/VSangarya/AMATSA/blob/main/README.md)|
+|Does your website and documentation clearly describe the type of user who should use your software?|3| [Github](https://github.com/VSangarya/AMATSA/blob/main/README.md) Yes, primary type of users are System Admins and describes the usecases as well |
+|Do you publish case studies to show how your software has been used by yourself and others?|1|Have shown the use cases, how it can be setup and how it can be improved|
+|Is the name of your project/software unique?|3|Yes, no other GitHub projects or other software with the same name exist|
+|Is your project/software name free from trademark violations?|3|Yes, no prior software, product, business, design or corporation with the name AMATSA exsists. Verified using Trademark Electronic Search System (TESS).|
+|Is your software available as a package that can be deployed without building it?|3|[Github](https://github.com/VSangarya/AMATSA/blob/main/INSTALL.md#-client) Yes, amasta-client can be installed without a build on any client to set up a period scheduled task to send the data.|
+|Is your software available for free?|3|Yes, the software is available for free|
+|Is your source code publicly available to download, either as a downloadable bundle or via access to a source code repository?|3|Can be downloaded or cloned through Github |
+|Is your software hosted in an established, third-party repository likeGitHub (https://github.com), BitBucket (https://bitbucket.org),LaunchPad (https://launchpad.net) orSourceForge (https://sourceforge.net)?|3|Yes, it is hosted on GitHub|
+|Is your documentation clearly available on your website or within your software?|3|All required documentation set up via the repositories readme, installation guides and setup steps.|
+|Does your documentation include a "quick start" guide, that provides a short overview of how to use your software with some basic examples of use?|3|[GitHub](https://github.com/VSangarya/AMATSA/blob/main/INSTALL.md#-client) is available for installation and usage guides.|
+|If you provide more extensive documentation, does this provide clear, step-by-step instructions on how to deploy and use your software?|2|No additonal documentation present. Installation and set up instructions provide all required details.|
+|Do you provide a comprehensive guide to all your software’s commands, functions and options?|2|All client functions commands explaied in installation guide. Classes and methods in source code give an overview of the codes functionality.|
+|Do you provide troubleshooting information that describes the symptoms and step-by-step solutions for problems and error messages?|0|Not present in the repository|
+|If your software can be used as a library, package or service by other software, do you provide comprehensive API documentation?|N/A|The software does not provide API documentation and cannot be used a package for other software at present|
+|Do you store your documentation under revision control with your source code?|3|[Github releases](https://github.com/VSangarya/AMATSA/releases)|
+|Do you publish your release history e.g. release data, version numbers, key features of each release etc. on your web site or in your documentation?|3|[Github releases](https://github.com/VSangarya/AMATSA/releases)|
+|Does your software describe how a user can get help with using your software?|3|[Github](https://github.com/VSangarya/AMATSA#readme) and [Issues](https://github.com/VSangarya/AMATSA/issues) E-mail address for contact is provided for help regarding the software. Installation and setup guides assist users in setting up and using the software as well|
+|Does your website and documentation describe what support, if any, you provide to users and developers?|3|[Github](https://github.com/VSangarya/AMATSA#readme)  E-mail address for contact is provided. Issues tab can used for potential questions and help which will be addressed by one of the project developers|
+|Does your project have an e-mail address or forum that is solely for supporting users?|3|[Github](https://github.com/VSangarya/AMATSA#readme) and [Issues](https://github.com/VSangarya/AMATSA/issues) E-mail address for contact is provided. Issues tab on the repository can be used for help regarding the software|
+Are e-mails to your support e-mail address received by more than one person?|---|---|
+Does your project have a ticketing system to manage bug reports and feature requests?|---|---|
+Is your project's ticketing system publicly visible to your users, so they can view bug reports and feature requests?|---|---|
 Software’s architecture and design is modular | --- | --- | 
 Software uses an accepted coding standard or convention | --- | --- | 
 Software allows data to be imported and exported using open data formats | --- | --- | 
