@@ -76,7 +76,7 @@ Download dependencies using a dependency management tool or package manager | 3 
 Tests that can be run after your software has been built or deployed to show whether the build or deployment has been successful | 3 | 'tests' folder | 
 Automated test suite for your software | 3 | [Github Workflows](https://github.com/VSangarya/AMATSA/blob/main/.github/workflows/build.yml) | 
 Framework to periodically (e.g. nightly) run your tests on the latest version of the source code | 0 | We run tests when a branch is being merged to main | 
-Using continuous integration, automatically running tests whenever changes are made to your source code | 3 | https://github.com/VSangarya/AMATSA/blob/main/.github/workflows/build.yml | 
+Using continuous integration, automatically running tests whenever changes are made to your source code | 3 | [Github Workflows](https://github.com/VSangarya/AMATSA/blob/main/.github/workflows/build.yml) | 
 Test results publicly visible | 3 | [Builds on a pull request](https://github.com/VSangarya/AMATSA/pulls) | 
 Manually-run tests documented |  |  | 
 Project has resources (e.g. blog, Twitter, RSS feed, Facebook page, wiki, mailing list) that are regularly updated with information about your software | 3 | All updates on the readme [README.md](https://github.com/VSangarya/AMATSA#-amatsa) | 
