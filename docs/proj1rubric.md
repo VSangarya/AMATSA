@@ -45,7 +45,7 @@
 |Does your documentation include a "quick start" guide, that provides a short overview of how to use your software with some basic examples of use?|3|[GitHub](https://github.com/VSangarya/AMATSA/blob/main/INSTALL.md#-client) is available for installation and usage guides.|
 |If you provide more extensive documentation, does this provide clear, step-by-step instructions on how to deploy and use your software?|2|No additonal documentation present. Installation and set up instructions provide all required details.|
 |Do you provide a comprehensive guide to all your software’s commands, functions and options?|2|All client functions commands explaied in installation guide. Classes and methods in source code give an overview of the codes functionality.|
-|Do you provide troubleshooting information that describes the symptoms and step-by-step solutions for problems and error messages?|0|Not present in the repository|
+|Do you provide troubleshooting information that describes the symptoms and step-by-step solutions for problems and error messages?|1|Debugging resources, issues and e-mail information present to assist with troubleshooting.|
 |If your software can be used as a library, package or service by other software, do you provide comprehensive API documentation?|N/A|The software does not provide API documentation and cannot be used a package for other software at present|
 |Do you store your documentation under revision control with your source code?|3|[Github releases](https://github.com/VSangarya/AMATSA/releases)|
 |Do you publish your release history e.g. release data, version numbers, key features of each release etc. on your web site or in your documentation?|3|[Github releases](https://github.com/VSangarya/AMATSA/releases)|
