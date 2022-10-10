@@ -38,7 +38,7 @@ def test_network_datatype():
         print("Failed to collect Network metrics")
         success = False
     data_types = {"mac_address" : str, "ip_address" : str, "hostname" : str, "connection_status" : bool,
-                  "down_speed" : float, "up_speed" : float, "time_now" : str}
+                  "down_speed" : float, "up_speed" : float, "time_now" : str, "connected_interface" : str}
     for k, v in json.items():
         if not isinstance(v, data_types[k]) :
             print(f"For data '{k}', type should be {data_types[k]}, not {type(v[k])}")

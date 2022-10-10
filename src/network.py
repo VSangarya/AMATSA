@@ -6,6 +6,7 @@ import speedtest
 import datetime
 from urllib.request import urlopen
 from uuid import getnode as get_mac
+import psutil
 
 UNKNOWN = "unknown"
 
@@ -20,6 +21,9 @@ class Network:
     up_speed = None
     speed_test = None
     connection_status = None
+    addresses = None
+    stats = None
+    connected_interface = None
 
     def __init__(self):
         self.connection_status = False
@@ -56,11 +60,21 @@ class Network:
         else:
             self.down_speed = UNKNOWN
             self.up_speed = UNKNOWN
+        self.addresses = psutil.net_if_addrs()
+        self.stats = psutil.net_if_stats()
+        self.connected_interface = UNKNOWN
+        prefixes = ["169.254", "127."]
+        for intface, addr_list in self.addresses.items():
+            if any(getattr(addr, "address").startswith(tuple(prefixes)) for addr in addr_list):
+                continue
+            elif intface in self.stats and getattr(self.stats[intface], "isup"):
+                self.connected_interface = intface
 
     def fill_network_info(self, json: dict):
         json["mac_address"] = self.mac_address
         json["ip_address"] = self.ip_address
         json["hostname"] = self.hostname
+        json["connected_interface"] = self.connected_interface
         json["connection_status"] = self.connection_status
         json["down_speed"] = self.down_speed
         json["up_speed"] = self.up_speed
