@@ -56,7 +56,7 @@ Are e-mails to your support e-mail address received by more than one person?|3 |
 Does your project have a ticketing system to manage bug reports and feature requests?|3|Yes ([Issues](https://github.com/VSangarya/AMATSA/issues)  section in GitHub)|
 Is your project's ticketing system publicly visible to your users, so they can view bug reports and feature requests?|3|	Yes, it is publicly available|
 Software’s architecture and design is modular | 3 | Yes - There are many seperate modules for different functionality in our repository| 
-Software uses an accepted coding standard or convention | 3 | --- | 
+Software uses an accepted coding standard or convention | 3 | Yes, coding standards are followed | 
 Software allows data to be imported and exported using open data formats | --- | --- | 
 Software allows communications using open communications protocols | --- | --- | 
 Software cross-platform compatible | --- | --- | 
