@@ -127,3 +127,7 @@ openssl x509 -fingerprint -sha256 -in /etc/elasticsearch/certs/http_ca.crt
 4.  Your client should be up and running by now!
 
 To uninstall, simply delete the scheduled task/cron job and remove the repository.
+
+### Debugging
+1.  On macOS, if the cron job is not running at the interval you have setup, make sure `cron` has access to the location where your repository is available on the filesystem.
+2.  On Windows, make sure the correct version of Python (3.10+) is installed and `python` is available in `PATH` location.

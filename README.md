@@ -50,6 +50,7 @@ https://user-images.githubusercontent.com/68890508/194654605-f23bc6a3-13ba-43b3-
 *  See [server installation](INSTALL.md#-server) instructions to setup Elasticsearch and Kibana.
 *  See [client installation](INSTALL.md#-client) instructions to deploy amatsa-client on assets.
 *  Once the server and the clients are setup, you can import and explore our pre-built Kibana dashboards.
+*  Common issues faced by users while setting up client are listed [here](INSTALL.md#debugging).
 
 ## 👩🏼‍💻 🚀 Developer Environment Setup
 ### Prerequisites
