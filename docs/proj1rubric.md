@@ -58,15 +58,15 @@ Is your project's ticketing system publicly visible to your users, so they can v
 Software’s architecture and design is modular | 3 | Yes - There are many seperate modules for different functionality in our repository| 
 Software uses an accepted coding standard or convention | 3 | Yes, coding standards are followed | 
 Software allows data to be imported and exported using open data formats | --- | --- | 
-Software allows communications using open communications protocols | --- | --- | 
-Software cross-platform compatible | --- | --- | 
+Software allows communications using open communications protocols | 3 | Yes, our website uses HTTP to communicate. | 
+Software cross-platform compatible | 3 | Yes - Works on Windows, Mac, Ubuntu--- | 
 Software adhere to appropriate accessibility conventions or standards | --- | --- | 
-Documentation adheres to appropriate accessibility conventions or standards | --- | ---  | 
-Each source code releases a snapshot of the repository | --- | --- | 
-Releases are tagged in the repository | --- | --- | 
-There is a branch of the repository that is always stable | --- | Main branch is always stable | 
-Back-up your repository | --- | --- | 
-Provide publicly available instructions for building the software from the source code | --- | --- | 
+Documentation adheres to appropriate accessibility conventions or standards | 3 | yes  | 
+Each source code releases a snapshot of the repository | 3 | Yes, we have multipe releases.| 
+Releases are tagged in the repository | 3 | --- | 
+There is a branch of the repository that is always stable | 3 | Main branch is always stable | 
+Back-up your repository | 3 | Yes, using git clone | 
+Provide publicly available instructions for building the software from the source code | 3 | --- | 
 Build, or package, the software using an automated tool | --- | --- | 
 Provide publicly-available instructions for deploying the software | 3 | [README.md](https://github.com/VSangarya/AMATSA#-amatsa) | 
 Documentation list all third-party dependencies | 3 | [requirements.txt](https://github.com/VSangarya/AMATSA/blob/main/requirements.txt) | 
