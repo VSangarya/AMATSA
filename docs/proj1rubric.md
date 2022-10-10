@@ -92,7 +92,7 @@ Do you have a contributions policy | 3 | [CONTRIBUTING.md](../CONTRIBUTING.md) |
 Is your contributions' policy publicly available? | 3 | [CONTRIBUTING.md](../CONTRIBUTING.md) | 
 Do contributors keep the copyright/IP of their contributions | 3 | Commits are public | 
 Website and documentation clearly states the copyright owners of your software and documentation | 3 | [README.md](https://github.com/VSangarya/AMATSA#-amatsa) | 
-Do each of your source code files include a copyright statement | 0 | 0 | 
+Do each of your source code files include a copyright statement | 0 |  | 
 The website and documentation clearly state the licence of your software | 3 | [LICENSE](../LICENSE) | 
 Software released under an open source licence | 3 | [LICENSE](../LICENSE) | 
 Software released under an OSI-approved open-source licence | 3 | [LICENSE](../LICENSE) | 
