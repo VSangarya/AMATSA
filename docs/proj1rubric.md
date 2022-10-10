@@ -65,7 +65,7 @@ Documentation adheres to appropriate accessibility conventions or standards | 3 
 Each source code releases a snapshot of the repository | 3 | Snapshot of latest release is available | 
 Releases are tagged in the repository | 3 | Yes, releases are tagged | 
 There is a branch of the repository that is always stable | 3 | Main branch is always stable | 
-Back-up your repository | 3 | Yes, using git clone | 
+Back-up your repository | 3 | Yes, using git clone!!| 
 Provide publicly available instructions for building the software from the source code | 3 | Setup instructions [README.md](https://github.com/VSangarya/AMATSA#-amatsa) | 
 Build, or package, the software using an automated tool | --- | --- | 
 Provide publicly-available instructions for deploying the software | 3 | [README.md](https://github.com/VSangarya/AMATSA#-amatsa) | 
