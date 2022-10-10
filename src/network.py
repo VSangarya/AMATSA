@@ -60,8 +60,8 @@ class Network:
         else:
             self.down_speed = UNKNOWN
             self.up_speed = UNKNOWN
-        self.addresses =psutil.net_if_addrs()
-        self.stats =psutil.net_if_stats()
+        self.addresses = psutil.net_if_addrs()
+        self.stats = psutil.net_if_stats()
         self.connected_interface = UNKNOWN
         prefixes = ["169.254","127."]
         for intface, addr_list in self.addresses.items():
