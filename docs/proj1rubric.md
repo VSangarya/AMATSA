@@ -36,7 +36,7 @@
 |Question 1.2: Does your website and documentation clearly describe the type of user who should use your software?|3| [Github](https://github.com/VSangarya/AMATSA/blob/main/README.md) Yes, primary type of users are System Admins and describes the usecases as well |
 |Question 1.3: Do you publish case studies to show how your software has been used by yourself and others?|1|Have shown the use cases, how it can be setup and how it can be improved|
 |Question 2.1: Is the name of your project/software unique?|3|Yes, no other GitHub projects or other software with the same name exist|
-|Question 2.2: Is your project/software name free from trademark violations?|---|---|
+|Question 2.2: Is your project/software name free from trademark violations?|3|Yes, no prior software, product, business, design or corporation with the name AMATSA exsists. Verified using Trademark Electronic Search System (TESS).|
 |Question 3.1: Is your software available as a package that can be deployed without building it?|---|---|
 |Question 3.2: Is your software available for free?|---|---|
 |Question 3.3: Is your source code publicly available to download, either as a downloadable bundle or via access to a source code repository?|---|---|
