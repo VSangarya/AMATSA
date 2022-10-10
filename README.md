@@ -1,6 +1,6 @@
 # 🖥 AMATSA
 [![Build](https://github.com/VSangarya/AMATSA/actions/workflows/build.yml/badge.svg)](https://github.com/VSangarya/AMATSA/actions/workflows/build.yml)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/VSangarya/AMATSA?display_name=tag)](https://github.com/VSangarya/AMATSA/releases)
+<a href="https://doi.org/10.5281/zenodo.7179464"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.7179464.svg" alt="DOI"></a>
 [![Codacy Badge](https://app.codacy.com/project/badge/Coverage/4d32b2c8032341409d0f8a73a1b2a3d1)](https://www.codacy.com/gh/VSangarya/AMATSA/dashboard?utm_source=github.com&utm_medium=referral&utm_content=VSangarya/AMATSA&utm_campaign=Badge_Coverage)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/4d32b2c8032341409d0f8a73a1b2a3d1)](https://www.codacy.com/gh/VSangarya/AMATSA/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=VSangarya/AMATSA&amp;utm_campaign=Badge_Grade)
 [![Commit Acitivity](https://img.shields.io/github/commit-activity/w/VSangarya/AMATSA)](https://github.com/VSangarya/AMATSA/pulse)
