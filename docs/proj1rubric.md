@@ -57,7 +57,7 @@
 |Question 5.6: Is your project's ticketing system publicly visible to your users, so they can view bug reports and feature requests?|---|---|
 Software’s architecture and design is modular | --- | --- | 
 Software uses an accepted coding standard or convention | --- | --- | 
-Software allows data to be imported and exported using open data formats | --- | Data is stored in PostgreSQL database and can be retrieved using command line | 
+Software allows data to be imported and exported using open data formats | --- | --- | 
 Software allows communications using open communications protocols | --- | --- | 
 Software cross-platform compatible | --- | --- | 
 Software adhere to appropriate accessibility conventions or standards | --- | --- | 
@@ -90,7 +90,7 @@ Since the software is developed as an open source project (and, not just a proje
 Do we accept contributions (e.g. bug fixes, enhancements, documentation updates, tutorials) from people who are not part of your project? | --- | --- | 
 Do you have a contributions policy | --- | --- | 
 Is your contributions' policy publicly available? | --- | --- | 
-Do contributors keep the copyright/IP of their contributions | --- | Authors of commit won't be changed. | 
+Do contributors keep the copyright/IP of their contributions | --- | --- | 
 Website and documentation clearly states the copyright owners of your software and documentation | --- | --- | 
 Do each of your source code files include a copyright statement | --- | --- | 
 The website and documentation clearly state the licence of your software | --- | --- | 
@@ -99,5 +99,5 @@ Software released under an OSI-approved open-source licence | --- | --- |
 Source code files include a licence header | --- | --- | 
 Recommended citation for your software | --- | --- | 
 Documentation includes a project roadmap (a list of project and development milestones for the next 3, 6 months) | --- | --- | 
-Documentation describe how the project is funded, and the period over which funding is guaranteed? | --- |  | 
+Documentation describe how the project is funded, and the period over which funding is guaranteed? | 3 | We used free tools hence no funding required | 
 Do you make timely announcements of the deprecation of components, APIs, etc. | --- | --- | 
