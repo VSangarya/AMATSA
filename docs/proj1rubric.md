@@ -52,11 +52,11 @@
 |Does your software describe how a user can get help with using your software?|3|[Github](https://github.com/VSangarya/AMATSA#readme) and [Issues](https://github.com/VSangarya/AMATSA/issues) E-mail address for contact is provided for help regarding the software. Installation and setup guides assist users in setting up and using the software as well|
 |Does your website and documentation describe what support, if any, you provide to users and developers?|3|[Github](https://github.com/VSangarya/AMATSA#readme)  E-mail address for contact is provided. Issues tab can used for potential questions and help which will be addressed by one of the project developers|
 |Does your project have an e-mail address or forum that is solely for supporting users?|3|[Github](https://github.com/VSangarya/AMATSA#readme) and [Issues](https://github.com/VSangarya/AMATSA/issues) E-mail address for contact is provided. Issues tab on the repository can be used for help regarding the software|
-Are e-mails to your support e-mail address received by more than one person?|---|---|
-Does your project have a ticketing system to manage bug reports and feature requests?|---|---|
-Is your project's ticketing system publicly visible to your users, so they can view bug reports and feature requests?|---|---|
-Software’s architecture and design is modular | --- | --- | 
-Software uses an accepted coding standard or convention | --- | --- | 
+Are e-mails to your support e-mail address received by more than one person?|3 |Yes all members have access to respective support emails|
+Does your project have a ticketing system to manage bug reports and feature requests?|3|Yes ([Issues](https://github.com/VSangarya/AMATSA/issues)  section in GitHub)|
+Is your project's ticketing system publicly visible to your users, so they can view bug reports and feature requests?|3|	Yes, it is publicly available|
+Software’s architecture and design is modular | 3 | Yes - There are many seperate modules for different functionality in our repository| 
+Software uses an accepted coding standard or convention | 3 | --- | 
 Software allows data to be imported and exported using open data formats | --- | --- | 
 Software allows communications using open communications protocols | --- | --- | 
 Software cross-platform compatible | --- | --- | 
