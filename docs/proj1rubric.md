@@ -83,22 +83,22 @@ Manually-run tests documented | --- | --- |
 Project has resources (e.g. blog, Twitter, RSS feed, Facebook page, wiki, mailing list) that are regularly updated with information about your software | 3 | All updates on the readme [README.md](https://github.com/VSangarya/AMATSA#-amatsa) | 
 Documentation states how many projects and users are associated with your project | --- | --- | 
 Provide success stories on your website | 0 | Software not yet used publicly | 
-Listing the important partners and collaborators in our documentation | --- | --- | 
+Listing the important partners and collaborators in your website | --- | --- | 
 Listing the project's publications on our website or link to a resource where these are available | 0 | No publications | 
 Listing third-party publications that refer to the software on our website or link to a resource where these are available | 0 | No publications | 
 Users can subscribe to notifications to changes to your source code repository | 3 | Software is on Github | 
-Since the software is developed as an open source project (and, not just a project developing open source software), do we have a governance model | 3 | 2 approvers required to merge into main | 
-Do we accept contributions (e.g. bug fixes, enhancements, documentation updates, tutorials) from people who are not part of your project? | 3 | Software is open source, other collaborators can create a pull request for a change | 
+Since the software is developed as an open source project (and, not just a project developing open source software), do you have a governance model | 3 | 2 approvers required to merge into main | 
+Do you accept contributions (e.g. bug fixes, enhancements, documentation updates, tutorials) from people who are not part of your project? | 3 | Software is open source, other collaborators can create a pull request for a change | 
 Do you have a contributions policy | 3 | [CONTRIBUTING.md](../CONTRIBUTING.md) | 
 Is your contributions' policy publicly available? | 3 | [CONTRIBUTING.md](../CONTRIBUTING.md) | 
 Do contributors keep the copyright/IP of their contributions | 3 | Commits are public | 
 Website and documentation clearly states the copyright owners of your software and documentation | 3 | [README.md](https://github.com/VSangarya/AMATSA#-amatsa) | 
-Do each of your source code files include a copyright statement | 0 |  | 
+Does each of your source code files include a copyright statement | 0 |  | 
 The website and documentation clearly state the licence of your software | 3 | [LICENSE](../LICENSE) | 
 Software released under an open source licence | 3 | [LICENSE](../LICENSE) | 
 Software released under an OSI-approved open-source licence | 3 | [LICENSE](../LICENSE) | 
 Source code files include a licence header | 0 |  | 
-Recommended citation for your software | 3 | Zenodo Badge in [README]((https://github.com/VSangarya/AMATSA#-amatsa)) | 
+Do you have a recommended citation for your software | 3 | Zenodo Badge in [README]((https://github.com/VSangarya/AMATSA#-amatsa)) | 
 Documentation includes a project roadmap (a list of project and development milestones for the next 3, 6 months) | 2 | Enhancements in [README]((https://github.com/VSangarya/AMATSA#-amatsa)) | 
 Documentation describe how the project is funded, and the period over which funding is guaranteed? | 3 | We used free tools hence no funding required | 
 Do you make timely announcements of the deprecation of components, APIs, etc. | 3 |  | 
