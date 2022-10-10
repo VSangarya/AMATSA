@@ -67,7 +67,7 @@ Releases are tagged in the repository | 3 | Yes, releases are tagged |
 There is a branch of the repository that is always stable | 3 | Main branch is always stable | 
 Back-up your repository | 3 | Yes, using git clone!!| 
 Provide publicly available instructions for building the software from the source code | 3 | Setup instructions [README.md](https://github.com/VSangarya/AMATSA#-amatsa) | 
-Build, or package, the software using an automated tool | --- | --- | 
+Build, or package, the software using an automated tool | 3 | Shell scripts for Unix/Batch script for Windows deployment | 
 Provide publicly-available instructions for deploying the software | 3 | [README.md](https://github.com/VSangarya/AMATSA#-amatsa) | 
 Documentation list all third-party dependencies | 3 | [requirements.txt](https://github.com/VSangarya/AMATSA/blob/main/requirements.txt) | 
 Documentation lists the version number for all third-party dependencies | 3 | [requirements.txt](https://github.com/VSangarya/AMATSA/blob/main/requirements.txt)| 
