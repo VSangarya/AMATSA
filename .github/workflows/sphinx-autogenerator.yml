@@ -1,12 +1,14 @@
 name: sphinx-autogenerator
 
 on:
-    push:
-        branches:
-            - remaking_docs
-    pull_request:
-        branches:
-            - remaking_docs
+  # Triggers the workflow on push or pull request events for the "main" branch
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 jobs:
     build:
@@ -14,9 +16,15 @@ jobs:
 
         steps:
             - uses: actions/checkout@v2
+              with:
+                repository: ${{ github.event.pull_request.head.repo.full_name }}
+                ref: ${{ github.event.pull_request.head.ref }}
+            - name: Install Python Dependencies
+              run: |
+                if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+                pip install -e .
             - name: Build documentation and commit
               run: |
-                  git pull origin remaking_docs
                   sudo apt-get install python3-sphinx                
                   sphinx-apidoc -f -o docs src
                   cd docs/
@@ -24,7 +32,7 @@ jobs:
                   cd ..
                   git config --global user.name "qureshi-ali"
                   git config --global user.email "qureshi.ali@outlook.com"
-                  git add .
+                  git add docs/*
                   git commit -m "updating docs" -a || true
-                  git push -u origin remaking_docs
+                  git push
         # ===============================

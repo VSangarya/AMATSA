@@ -34,20 +34,224 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="src-disk-module">
-<h2>src.disk module<a class="headerlink" href="#src-disk-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-src.disk">
+<span id="src-disk-module"></span><h2>src.disk module<a class="headerlink" href="#module-src.disk" title="Permalink to this headline">¶</a></h2>
+<p>This module fetches disk information and returns a JSON with the disk data</p>
+<dl class="class">
+<dt id="src.disk.Disk">
+<em class="property">class </em><code class="descclassname">src.disk.</code><code class="descname">Disk</code><a class="headerlink" href="#src.disk.Disk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to fetch, format and return disk information</p>
+<dl class="method">
+<dt id="src.disk.Disk.check_attr">
+<code class="descname">check_attr</code><span class="sig-paren">(</span><em>attr</em>, <em>val</em><span class="sig-paren">)</span><a class="headerlink" href="#src.disk.Disk.check_attr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether attribute for object present, if present, call and return data</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.disk.Disk.format_darwin">
+<code class="descname">format_darwin</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#src.disk.Disk.format_darwin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Format disk data for MacOS, summarize all paritions into the disk it belons to</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.disk.Disk.retrieve_disk_info">
+<code class="descname">retrieve_disk_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.disk.Disk.retrieve_disk_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrive disk information, format and return it</p>
+</dd></dl>
+
+</dd></dl>
+
 </div>
-<div class="section" id="src-driver-module">
-<h2>src.driver module<a class="headerlink" href="#src-driver-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-src.driver">
+<span id="src-driver-module"></span><h2>src.driver module<a class="headerlink" href="#module-src.driver" title="Permalink to this headline">¶</a></h2>
+<p>Client Code integrates all metrics and send to Elastic Server</p>
+<dl class="function">
+<dt id="src.driver.CollectMetrics">
+<code class="descclassname">src.driver.</code><code class="descname">CollectMetrics</code><span class="sig-paren">(</span><em>obj: dict</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#src.driver.CollectMetrics" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method collects client metrics and returns them in a json</p>
+</dd></dl>
+
 </div>
-<div class="section" id="src-gpu-module">
-<h2>src.gpu module<a class="headerlink" href="#src-gpu-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-src.gpu">
+<span id="src-gpu-module"></span><h2>src.gpu module<a class="headerlink" href="#module-src.gpu" title="Permalink to this headline">¶</a></h2>
+<p>This module fetches GPU information and returns a JSON with the GPU data</p>
+<dl class="class">
+<dt id="src.gpu.GPUdata">
+<em class="property">class </em><code class="descclassname">src.gpu.</code><code class="descname">GPUdata</code><a class="headerlink" href="#src.gpu.GPUdata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to fetch, format and return GPU information</p>
+<dl class="method">
+<dt id="src.gpu.GPUdata.check_attr">
+<code class="descname">check_attr</code><span class="sig-paren">(</span><em>attr</em>, <em>val</em><span class="sig-paren">)</span><a class="headerlink" href="#src.gpu.GPUdata.check_attr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="src.gpu.GPUdata.gpudata">
+<code class="descname">gpudata</code><em class="property"> = None</em><a class="headerlink" href="#src.gpu.GPUdata.gpudata" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="src.gpu.GPUdata.retrieve_gpu_info">
+<code class="descname">retrieve_gpu_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.gpu.GPUdata.retrieve_gpu_info" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
-<div class="section" id="src-network-module">
-<h2>src.network module<a class="headerlink" href="#src-network-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-src.network">
+<span id="src-network-module"></span><h2>src.network module<a class="headerlink" href="#module-src.network" title="Permalink to this headline">¶</a></h2>
+<p>This module fetches network information and returns a JSON with the network info data</p>
+<dl class="class">
+<dt id="src.network.Network">
+<em class="property">class </em><code class="descclassname">src.network.</code><code class="descname">Network</code><a class="headerlink" href="#src.network.Network" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to fetch, format and return network information</p>
+<dl class="attribute">
+<dt id="src.network.Network.addresses">
+<code class="descname">addresses</code><em class="property"> = None</em><a class="headerlink" href="#src.network.Network.addresses" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="src.network.Network.connect_status">
+<code class="descname">connect_status</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.network.Network.connect_status" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="src.network.Network.connected_interface">
+<code class="descname">connected_interface</code><em class="property"> = None</em><a class="headerlink" href="#src.network.Network.connected_interface" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="src.network.Network.connection_status">
+<code class="descname">connection_status</code><em class="property"> = None</em><a class="headerlink" href="#src.network.Network.connection_status" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="src.network.Network.down_speed">
+<code class="descname">down_speed</code><em class="property"> = None</em><a class="headerlink" href="#src.network.Network.down_speed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="src.network.Network.fill_network_info">
+<code class="descname">fill_network_info</code><span class="sig-paren">(</span><em>json: dict</em><span class="sig-paren">)</span><a class="headerlink" href="#src.network.Network.fill_network_info" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="src.network.Network.get_network_info">
+<code class="descname">get_network_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.network.Network.get_network_info" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="src.network.Network.hostname">
+<code class="descname">hostname</code><em class="property"> = None</em><a class="headerlink" href="#src.network.Network.hostname" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="src.network.Network.ip_address">
+<code class="descname">ip_address</code><em class="property"> = None</em><a class="headerlink" href="#src.network.Network.ip_address" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="src.network.Network.mac_address">
+<code class="descname">mac_address</code><em class="property"> = None</em><a class="headerlink" href="#src.network.Network.mac_address" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="src.network.Network.speed_test">
+<code class="descname">speed_test</code><em class="property"> = None</em><a class="headerlink" href="#src.network.Network.speed_test" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="src.network.Network.stats">
+<code class="descname">stats</code><em class="property"> = None</em><a class="headerlink" href="#src.network.Network.stats" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="src.network.Network.time_now">
+<code class="descname">time_now</code><em class="property"> = None</em><a class="headerlink" href="#src.network.Network.time_now" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="src.network.Network.up_speed">
+<code class="descname">up_speed</code><em class="property"> = None</em><a class="headerlink" href="#src.network.Network.up_speed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
-<div class="section" id="src-system-module">
-<h2>src.system module<a class="headerlink" href="#src-system-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-src.system">
+<span id="src-system-module"></span><h2>src.system module<a class="headerlink" href="#module-src.system" title="Permalink to this headline">¶</a></h2>
+<p>File contains definition for System class</p>
+<dl class="class">
+<dt id="src.system.System">
+<em class="property">class </em><code class="descclassname">src.system.</code><code class="descname">System</code><a class="headerlink" href="#src.system.System" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Defines methods to retrieve machine info</p>
+<dl class="method">
+<dt id="src.system.System.FillSystemInfo">
+<code class="descname">FillSystemInfo</code><span class="sig-paren">(</span><em>json: dict</em><span class="sig-paren">)</span><a class="headerlink" href="#src.system.System.FillSystemInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method fills the colelcted system info from the object’s attributes</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.system.System.FillSystemMetrics">
+<code class="descname">FillSystemMetrics</code><span class="sig-paren">(</span><em>json: dict</em><span class="sig-paren">)</span><a class="headerlink" href="#src.system.System.FillSystemMetrics" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method fills system information that is more prone to change</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="src.system.System.bios_uuid">
+<code class="descname">bios_uuid</code><em class="property"> = None</em><a class="headerlink" href="#src.system.System.bios_uuid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="src.system.System.hostname">
+<code class="descname">hostname</code><em class="property"> = None</em><a class="headerlink" href="#src.system.System.hostname" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="src.system.System.is_x64">
+<code class="descname">is_x64</code><em class="property"> = None</em><a class="headerlink" href="#src.system.System.is_x64" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="src.system.System.logical_cores">
+<code class="descname">logical_cores</code><em class="property"> = None</em><a class="headerlink" href="#src.system.System.logical_cores" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="src.system.System.machine">
+<code class="descname">machine</code><em class="property"> = None</em><a class="headerlink" href="#src.system.System.machine" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="src.system.System.physical_cores">
+<code class="descname">physical_cores</code><em class="property"> = None</em><a class="headerlink" href="#src.system.System.physical_cores" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="src.system.System.platform_name">
+<code class="descname">platform_name</code><em class="property"> = None</em><a class="headerlink" href="#src.system.System.platform_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="src.system.System.release">
+<code class="descname">release</code><em class="property"> = None</em><a class="headerlink" href="#src.system.System.release" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="src.system.System.total_memory">
+<code class="descname">total_memory</code><em class="property"> = None</em><a class="headerlink" href="#src.system.System.total_memory" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="src.system.System.version">
+<code class="descname">version</code><em class="property"> = None</em><a class="headerlink" href="#src.system.System.version" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
 <div class="section" id="module-src.utils">
 <span id="src-utils-module"></span><h2>src.utils module<a class="headerlink" href="#module-src.utils" title="Permalink to this headline">¶</a></h2>
