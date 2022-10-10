@@ -79,3 +79,13 @@ pip install -e .
 *  Collect running process information (name, pid) to identify unique instances across your organization.
 *  Monitor listening ports across assets to identify which services are listening in your network.
 *  Configure a rule file containing filenames to monitor on the client. If the hash of monitored file changes, you can send an event.
+
+### ⚙︎📧 Troubleshooting, help and contact information
+For any help or assistance regarding the software, please E-mail any of the developers with the query or a detailed description. Additionally, please use issues on GitHub for any software related issues, bugs or questions.
+*  mquresh@ncsu.edu
+*  apandit3@ncsu.edu
+*  apandit3@ncsu.edu
+*  vnagara3@ncsu.edu
+*  lsangar@ncsu.edu
+
+
