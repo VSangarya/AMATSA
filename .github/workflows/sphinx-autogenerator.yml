@@ -34,5 +34,5 @@ jobs:
                   git config --global user.email "qureshi.ali@outlook.com"
                   git add docs/*
                   git commit -m "updating docs" -a || true
-                  git push -u origin ${{ github.event.pull_request.head.repo.full_name }}
+                  git push
         # ===============================
