@@ -3,10 +3,12 @@ name: sphinx-autogenerator
 on:
     push:
         branches:
-            - remaking_docs
+            - main
     pull_request:
         branches:
-            - remaking_docs
+            - main
+            
+    workflow_dispatch:
 
 jobs:
     build:
